@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function DashboardLayout({
   children,
 }: {
@@ -6,7 +9,16 @@ export default function DashboardLayout({
   return (
     <div className="h-screen flex">
       {/* Sidebar */}
-      <div className="w-64 bg-gray-900 text-white p-4">L</div>
+      <div className="w-64 bg-gray-900 text-white p-4">
+        <Link href="/">
+          <Image
+            src="/images/logo.png"
+            alt="School Logo"
+            width={60}
+            height={40}
+          />
+        </Link>
+      </div>
 
       {/* Content */}
       <div className="flex-1 bg-gray-100 p-4">{children}</div>
