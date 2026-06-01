@@ -9,15 +9,17 @@ export default function DashboardLayout({
   return (
     <div className="h-screen flex">
       {/* Sidebar */}
-      <div className="w-64 bg-gray-900 text-white p-4">
+      <div className="w-64 bg-gray-900 text-white p-4  flex space-x-2">
         <Link href="/">
           <Image
-            src="/images/logo.png"
+            src="/images/download.png"
             alt="School Logo"
-            width={60}
+            width={40}
             height={40}
+            className="rounded-full"
           />
         </Link>
+        <span className="hidden lg:block font-semibold ">School</span>
       </div>
 
       {/* Content */}
