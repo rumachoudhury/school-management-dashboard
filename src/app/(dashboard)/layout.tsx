@@ -44,7 +44,7 @@ export default function DashboardLayout({
     // </div>
 
     // ===================================
-    <div className="h-screen flex">
+    <div className="min-h-screen flex">
       {/* Sidebar */}
       <div className="w-64 bg-gray-900 text-white p-4">
         <Link href="/" className="flex items-center gap-2 mb-8">
