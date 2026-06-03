@@ -63,7 +63,7 @@ export default function DashboardLayout({
       </div>
 
       {/* Right side */}
-      <div className="flex-1 bg-gray-100">
+      <div className="flex-1 bg-gray-100 overflow-scroll">
         <Navbar />
         <div className="p-4">{children}</div>
       </div>
