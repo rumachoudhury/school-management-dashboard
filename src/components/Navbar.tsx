@@ -28,7 +28,17 @@ function Navbar() {
     <div className="flex items-center justify-between p-4">
       {/* Search Bar */}
       <div className="hidden md:flex">
-        <Image src="/logo.png" alt="Logo" width={40} height={40} />
+        <Image
+          src="/images/school-management-dashboard/search.png"
+          alt="Search image"
+          width={14}
+          height={14}
+        />
+        <input
+          type="text"
+          placeholder="Search..."
+          className="ml-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
       </div>
 
       {/* Icons and User */}
