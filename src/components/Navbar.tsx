@@ -42,8 +42,8 @@ function Navbar() {
       </div>
 
       {/* Icons and User */}
-      <div className="">
-        <div className="">
+      <div className="flex items-center space-x-4">
+        <div className="bg-white rounded-full w-7 h-7">
           <Image
             src="/images/school-management-dashboard/message.png"
             alt="Notification image"
