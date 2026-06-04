@@ -25,7 +25,7 @@ function Navbar() {
     //   </div>
     // </div>
 
-    <div className="flex items-center justify-between p-4">
+    <div className="flex items-center justify-between p-4 bg-gray-200">
       {/* Search Bar */}
       <div className="hidden md:flex">
         <Image
@@ -42,7 +42,16 @@ function Navbar() {
       </div>
 
       {/* Icons and User */}
-      <div className=""></div>
+      <div className="">
+        <div className="">
+          <Image
+            src="/images/school-management-dashboard/message.png"
+            alt="Notification image"
+            width={14}
+            height={14}
+          />
+        </div>
+      </div>
     </div>
   );
 }
