@@ -54,11 +54,16 @@ function Navbar() {
 
         <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer">
           <Image
-            src="/images/school-management-dashboard/message.png"
+            src="/images/school-management-dashboard/announcement.png"
             alt="Notification image"
             width={14}
             height={14}
           />
+        </div>
+
+        <div className="flex flex-col">
+          <span>John Doe</span>
+          <span>Nik John</span>
         </div>
       </div>
     </div>
