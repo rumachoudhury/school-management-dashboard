@@ -59,6 +59,10 @@ function Navbar() {
             width={14}
             height={14}
           />
+
+          <div className="absolute -top-3 -right-3 w-5 h-5 flex items-center justify-center bg-purple-500 text-white text-xs rounded-full">
+            1
+          </div>
         </div>
 
         <div className="flex flex-col">
