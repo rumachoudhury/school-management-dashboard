@@ -62,8 +62,8 @@ function Navbar() {
         </div>
 
         <div className="flex flex-col">
-          <span>John Doe</span>
-          <span>Nik John</span>
+          <span className="text-sm leading-3 font-medium">John Doe</span>
+          <span>Admin</span>
         </div>
       </div>
     </div>
