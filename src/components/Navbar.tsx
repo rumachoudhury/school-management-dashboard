@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className="flex items-center justify-between p-4 bg-gray-200">
       {/* Search Bar */}
-      <div className="hidden md:flex items-center gap-2 text-sm rounded-full">
+      <div className="hidden md:flex items-center gap-2 text-sm rounded-full ring-[1.5px] ring-gray-300 px-3 py-1">
         <Image
           src="/images/school-management-dashboard/search.png"
           alt="Search image"
@@ -16,7 +16,7 @@ function Navbar() {
         <input
           type="text"
           placeholder="Search..."
-          className="ml-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="ml-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-50"
         />
       </div>
 
