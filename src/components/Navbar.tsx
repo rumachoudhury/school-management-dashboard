@@ -63,8 +63,16 @@ function Navbar() {
 
         <div className="flex flex-col">
           <span className="text-sm leading-3 font-medium">John Doe</span>
-          <span>Admin</span>
+          <span className="text-xs text-gray-500 text-right">Admin</span>
         </div>
+
+        <Image
+          src="/images/school-management-dashboard/avatar.png"
+          alt="Profile image"
+          width={32}
+          height={32}
+          className="rounded-full cursor-pointer"
+        />
       </div>
     </div>
   );
