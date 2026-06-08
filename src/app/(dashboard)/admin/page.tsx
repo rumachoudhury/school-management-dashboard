@@ -2,8 +2,7 @@ import React from "react";
 
 function AdminPage() {
   return (
-    <div className="p-4 flex-col md:flex-row">
-      <h1 className="text-2xl font-bold mb-4">Admin Dashboard</h1>
+    <div className="p-4 flex flex-col md:flex-row lg:flex-row">
       {/* left */}
       <div className="w-full lg:w-2/3">L</div>
 
