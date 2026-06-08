@@ -8,7 +8,7 @@ function AdminPage() {
       <div className="w-full lg:w-2/3">
         {" "}
         {/* User Cart */}
-        <div className="flex gap-4 justify-between">
+        <div className="flex gap-4 justify-between flex-wrap">
           <UserCart type="student" />
           <UserCart type="teacher" />
           <UserCart type="parent" />
