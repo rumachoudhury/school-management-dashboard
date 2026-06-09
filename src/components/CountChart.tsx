@@ -66,7 +66,7 @@ function CountChart() {
       <div>
         <h2 className="text-xl font-bold mb-4">Students</h2>
         <Image
-          src="/images/school-management-dashboard/more.png"
+          src="/images/school-management-dashboard/moreDark.png"
           alt="More image"
           width={24}
           height={24}
