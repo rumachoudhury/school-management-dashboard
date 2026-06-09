@@ -63,7 +63,7 @@ function CountChart() {
   return (
     <div>
       {/* Title */}
-      <div>
+      <div className="flex justify-between items-center">
         <h2 className="text-xl font-bold mb-4">Students</h2>
         <Image
           src="/images/school-management-dashboard/moreDark.png"
@@ -73,7 +73,7 @@ function CountChart() {
         />
       </div>
 
-      {/* Chart */}
+      {/*Chart */}
       <div>
         <RadialBarChart
           style={{
@@ -103,7 +103,7 @@ function CountChart() {
         </RadialBarChart>
       </div>
 
-      {/* Bottom */}
+      {/*Bottom*/}
       <div></div>
     </div>
   );

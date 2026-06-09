@@ -14,6 +14,16 @@ function AdminPage() {
           <UserCart type="parent" />
           <UserCart type="staff" />
         </div>
+        {/* Middle Cart */}
+        <div className="flex gap-4 flex-col lg:flex-row">
+          {/* Count Chart */}
+          <div className="w-full lg:w-1/3 h-[450px]"></div>
+
+          {/* Attendent Chart */}
+          <div className="w-full lg:w-2/3 h-[450px]"></div>
+        </div>
+        {/* Bottom Cart */}
+        <div className=""></div>
       </div>
 
       {/* right */}
