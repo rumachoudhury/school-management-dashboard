@@ -1,8 +1,8 @@
 "use client";
 
 import { RadialBarChart, RadialBar, Legend, Tooltip } from "recharts";
-import { RechartsDevtools } from "@recharts/devtools";
-import { ResponsiveContainer } from "recharts";
+// import { RechartsDevtools } from "@recharts/devtools";
+// import { ResponsiveContainer } from "recharts";
 import Image from "next/image";
 
 // #region Sample data
@@ -61,7 +61,7 @@ const style = {
 
 function CountChart() {
   return (
-    <div>
+    <div className="bg-white rounded-xl w-full">
       {/* Title */}
       <div className="flex justify-between items-center">
         <h2 className="text-xl font-bold mb-4">Students</h2>
@@ -75,6 +75,7 @@ function CountChart() {
 
       {/*Chart */}
       <div>
+        {/* <ResponsiveContainer width="100%" height="100%"> */}
         <RadialBarChart
           style={{
             width: "100%",
@@ -99,8 +100,9 @@ function CountChart() {
             wrapperStyle={style}
           />
           <Tooltip />
-          <RechartsDevtools />
+          {/* <RechartsDevtools /> */}
         </RadialBarChart>
+        {/* </ResponsiveContainer> */}
       </div>
 
       {/*Bottom*/}

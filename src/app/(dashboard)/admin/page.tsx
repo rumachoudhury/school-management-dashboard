@@ -1,5 +1,6 @@
 import React from "react";
 import UserCart from "../../../components/UserCart";
+import CountChart from "@/src/components/CountChart";
 
 function AdminPage() {
   return (
@@ -17,7 +18,9 @@ function AdminPage() {
         {/* Middle Cart */}
         <div className="flex gap-4 flex-col lg:flex-row">
           {/* Count Chart */}
-          <div className="w-full lg:w-1/3 h-[450px]"></div>
+          <div className="w-full lg:w-1/3 h-[450px]">
+            <CountChart />
+          </div>
 
           {/* Attendent Chart */}
           <div className="w-full lg:w-2/3 h-[450px]"></div>

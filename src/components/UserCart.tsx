@@ -1,27 +1,3 @@
-// import React from "react";
-// import Image from "next/image";
-
-// function UserCart({ type }: { type: string }) {
-//   return (
-//     <div className="rounded-2xl odd:bg-[#7B61FF] even:bg-[#F9E5C9] p-4 flex-1 min-w-[170px]">
-//       <div className="flex flex-col justify-between items-center gap-2">
-//         <span className="text-xs bg-white px-2 py-1 rounded-full text-green-400">
-//           2025/26
-//         </span>
-//         <Image
-//           src="/images/school-management-dashboard/more.png"
-//           alt="More image"
-//           width={20}
-//           height={20}
-//         />
-//         <h1 className="text-2xl">1,234</h1>
-//         <span>{type}</span>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default UserCart;
 import React from "react";
 import Image from "next/image";
 
