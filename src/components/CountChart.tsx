@@ -3,6 +3,7 @@
 import { RadialBarChart, RadialBar, Legend, Tooltip } from "recharts";
 import { RechartsDevtools } from "@recharts/devtools";
 import { ResponsiveContainer } from "recharts";
+import Image from "next/image";
 
 // #region Sample data
 const data = [
@@ -62,7 +63,15 @@ function CountChart() {
   return (
     <div>
       {/* Title */}
-      <div></div>
+      <div>
+        <h2 className="text-xl font-bold mb-4">Students</h2>
+        <Image
+          src="/images/school-management-dashboard/more.png"
+          alt="More image"
+          width={24}
+          height={24}
+        />
+      </div>
 
       {/* Chart */}
       <div>
