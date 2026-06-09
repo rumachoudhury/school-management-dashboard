@@ -6,7 +6,7 @@ function AdminPage() {
   return (
     <div className="p-4 flex flex-col md:flex-row lg:flex-row">
       {/* left */}
-      <div className="w-full lg:w-2/3">
+      <div className="w-full lg:w-2/3 flex flex-col gap-4">
         {" "}
         {/* User Cart */}
         <div className="flex gap-4 justify-between flex-wrap">

@@ -61,7 +61,7 @@ const style = {
 
 function CountChart() {
   return (
-    <div className="bg-white rounded-xl w-full">
+    <div className="bg-white rounded-xl w-full h-full p-4 shadow-md flex flex-col">
       {/* Title */}
       <div className="flex justify-between items-center">
         <h2 className="text-xl font-bold mb-4">Students</h2>
@@ -106,7 +106,11 @@ function CountChart() {
       </div>
 
       {/*Bottom*/}
-      <div></div>
+      <div className="flex justify-center gap-16">
+        <div className="">
+          <div className=""></div>
+        </div>
+      </div>
     </div>
   );
 }
