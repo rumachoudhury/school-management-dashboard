@@ -2,6 +2,7 @@
 
 import { RadialBarChart, RadialBar, Legend, Tooltip } from "recharts";
 import { RechartsDevtools } from "@recharts/devtools";
+import { ResponsiveContainer } from "recharts";
 
 // #region Sample data
 const data = [
@@ -58,7 +59,45 @@ const style = {
 };
 
 function CountChart() {
-  return <div>CountChart</div>;
+  return (
+    <div>
+      {/* Title */}
+      <div></div>
+
+      {/* Chart */}
+      <div>
+        <RadialBarChart
+          style={{
+            width: "100%",
+            maxWidth: "700px",
+            maxHeight: "80vh",
+            aspectRatio: 1.618,
+          }}
+          responsive
+          cx="30%"
+          barSize={14}
+          data={data}
+        >
+          <RadialBar
+            label={{ position: "insideStart", fill: "#fff" }}
+            background
+            dataKey="uv"
+          />
+          <Legend
+            iconSize={10}
+            layout="vertical"
+            verticalAlign="middle"
+            wrapperStyle={style}
+          />
+          <Tooltip />
+          <RechartsDevtools />
+        </RadialBarChart>
+      </div>
+
+      {/* Bottom */}
+      <div></div>
+    </div>
+  );
 }
 
 export default CountChart;
