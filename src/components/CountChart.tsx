@@ -108,7 +108,11 @@ function CountChart() {
       {/*Bottom*/}
       <div className="flex justify-center gap-16">
         <div className="">
-          <div className=""></div>
+          <div className="w-5 h-5 bg-amber-50 rounded-full">
+            <h1>1,450</h1>
+
+            <h2>Boys 50%</h2>
+          </div>
         </div>
       </div>
     </div>
