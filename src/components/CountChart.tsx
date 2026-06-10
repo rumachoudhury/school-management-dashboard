@@ -64,7 +64,7 @@ function CountChart() {
     <div className="bg-white rounded-xl w-full h-full p-4 shadow-md flex flex-col">
       {/* Title */}
       <div className="flex justify-between items-center">
-        <h2 className="text-xl font-bold mb-4">Students</h2>
+        <h2 className="text-lg font-semibold mb-4">Students</h2>
         <Image
           src="/images/school-management-dashboard/moreDark.png"
           alt="More image"
@@ -74,7 +74,7 @@ function CountChart() {
       </div>
 
       {/*Chart */}
-      <div>
+      <div className="w-full h-[75%]">
         {/* <ResponsiveContainer width="100%" height="100%"> */}
         <RadialBarChart
           style={{
@@ -97,7 +97,7 @@ function CountChart() {
             iconSize={10}
             layout="vertical"
             verticalAlign="middle"
-            wrapperStyle={style}
+            // wrapperStyle={style}
           />
           <Tooltip />
           {/* <RechartsDevtools /> */}
@@ -133,7 +133,7 @@ function CountChart() {
         <div className="flex flex-col items-center gap-1">
           <div className="w-3 h-3 bg-[#7B61FF] rounded-full"></div>
           <h1 className="font-bold">1,450</h1>
-          <h2 className="text-sm text-gray-500">Boys (50%)</h2>
+          <h2 className="text-sm text-gray-500">Boys (55%)</h2>
         </div>
       </div>
     </div>
