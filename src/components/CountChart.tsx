@@ -8,6 +8,12 @@ import Image from "next/image";
 // #region Sample data
 const data = [
   {
+    name: "Total",
+    count: 90,
+    pv: 2400,
+    fill: "#8884d8",
+  },
+  {
     name: "Girls",
     count: 50,
     pv: 2400,
