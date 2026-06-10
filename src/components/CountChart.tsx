@@ -11,7 +11,7 @@ const data = [
     name: "Total",
     count: 90,
     pv: 2400,
-    fill: "#8884d8",
+    fill: "white",
   },
   {
     name: "Girls",
@@ -70,12 +70,12 @@ function CountChart() {
             // dataKey="uv"
             dataKey="count"
           />
-          <Legend
+          {/* <Legend
             iconSize={10}
             layout="vertical"
             verticalAlign="middle"
             // wrapperStyle={style}
-          />
+          /> */}
           <Tooltip />
           {/* <RechartsDevtools /> */}
         </RadialBarChart>
@@ -99,7 +99,6 @@ function CountChart() {
         </div>
       </div> */}
 
-      {/* Bottom */}
       <div className="flex gap-10 justify-center">
         <div className="flex flex-col items-center gap-1">
           <div className="w-3 h-3 bg-[#F9E5C9] rounded-full"></div>
