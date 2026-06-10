@@ -24,7 +24,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-arp="">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        // className={`${geistSans.variable} ${geistMono.variable}`}
+        className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+        cz-shortcut-listen="true"
+      >
         {children}
       </body>
     </html>

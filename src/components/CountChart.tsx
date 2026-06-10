@@ -40,7 +40,7 @@ function CountChart() {
     <div className="bg-white rounded-xl w-full h-full p-4 shadow-md flex flex-col">
       {/* Title */}
       <div className="flex justify-between items-center">
-        <h2 className="text-lg font-semibold mb-4">Students</h2>
+        <h2 className="text-lg font-semibold ">Students</h2>
         <Image
           src="/images/school-management-dashboard/moreDark.png"
           alt="More image"
@@ -65,7 +65,7 @@ function CountChart() {
           data={data}
         >
           <RadialBar
-            label={{ position: "insideStart", fill: "#fff" }}
+            // label={{ position: "insideStart", fill: "#fff" }}
             background
             // dataKey="uv"
             dataKey="count"
