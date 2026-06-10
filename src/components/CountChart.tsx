@@ -61,7 +61,8 @@ function CountChart() {
           <RadialBar
             label={{ position: "insideStart", fill: "#fff" }}
             background
-            dataKey="uv"
+            // dataKey="uv"
+            dataKey="count"
           />
           <Legend
             iconSize={10}
