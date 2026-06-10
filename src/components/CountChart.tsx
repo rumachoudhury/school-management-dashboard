@@ -1,8 +1,6 @@
 "use client";
 
-import { RadialBarChart, RadialBar, Legend, Tooltip } from "recharts";
-// import { RechartsDevtools } from "@recharts/devtools";
-// import { ResponsiveContainer } from "recharts";
+import { RadialBarChart, RadialBar } from "recharts";
 import Image from "next/image";
 
 // #region Sample data
@@ -50,8 +48,7 @@ function CountChart() {
       </div>
 
       {/*Chart */}
-      <div className="relative w-full h-[75%]">
-        {/* <ResponsiveContainer width="100%" height="100%"> */}
+      {/* <div className="relative w-full h-[300px]">
         <RadialBarChart
           style={{
             width: "100%",
@@ -59,33 +56,43 @@ function CountChart() {
             maxHeight: "80vh",
             aspectRatio: 1.618,
           }}
-          responsive
-          cx="30%"
+          // responsive
+          cx="50%"
           barSize={32}
           data={data}
         >
-          <RadialBar
-            // label={{ position: "insideStart", fill: "#fff" }}
-            background
-            // dataKey="uv"
-            dataKey="count"
-          />
-          {/* <Legend
-            iconSize={10}
-            layout="vertical"
-            verticalAlign="middle"
-            // wrapperStyle={style}
-          /> */}
-          <Tooltip />
-          {/* <RechartsDevtools /> */}
+          <RadialBar background dataKey="count" />
         </RadialBarChart>
-        {/* </ResponsiveContainer> */}
 
         <Image
           src="/images/school-management-dashboard/maleFemale.png"
           alt="Male and female chart icon"
-          width={20}
-          height={20}
+          width={40}
+          height={40}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        />
+      </div> */}
+
+      <div className="relative flex justify-center items-center h-[250px]">
+        <RadialBarChart
+          width={250}
+          height={250}
+          cx="50%"
+          cy="50%"
+          innerRadius="60%"
+          outerRadius="100%"
+          barSize={32}
+          data={data}
+        >
+          <RadialBar background dataKey="count" />
+        </RadialBarChart>
+
+        <Image
+          src="/images/school-management-dashboard/maleFemale.png"
+          alt="Male and female chart icon"
+          width={40}
+          height={40}
+          className="absolute"
         />
       </div>
 
