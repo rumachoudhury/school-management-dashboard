@@ -17,13 +17,13 @@ const data = [
     name: "Girls",
     count: 50,
     pv: 2400,
-    fill: "#8884d8",
+    fill: "#38BDF8",
   },
   {
     name: "Boys",
     count: 40,
     pv: 4567,
-    fill: "#83a6ed",
+    fill: "#FACC15",
   },
 ];
 
@@ -61,7 +61,7 @@ function CountChart() {
           }}
           responsive
           cx="30%"
-          barSize={14}
+          barSize={32}
           data={data}
         >
           <RadialBar
