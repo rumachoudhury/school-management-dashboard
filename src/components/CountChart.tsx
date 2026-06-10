@@ -50,7 +50,7 @@ function CountChart() {
       </div>
 
       {/*Chart */}
-      <div className="w-full h-[75%]">
+      <div className="relative w-full h-[75%]">
         {/* <ResponsiveContainer width="100%" height="100%"> */}
         <RadialBarChart
           style={{
@@ -80,6 +80,13 @@ function CountChart() {
           {/* <RechartsDevtools /> */}
         </RadialBarChart>
         {/* </ResponsiveContainer> */}
+
+        <Image
+          src="/images/school-management-dashboard/maleFemale.png"
+          alt="Male and female chart icon"
+          width={20}
+          height={20}
+        />
       </div>
 
       {/*Bottom*/}
