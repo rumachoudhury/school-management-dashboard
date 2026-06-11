@@ -14,31 +14,11 @@ import {
 } from "recharts";
 
 const data = [
-  {
-    name: " Monday",
-    present: 4000,
-    absent: 2400,
-  },
-  {
-    name: "Twesday",
-    present: 4000,
-    absent: 2400,
-  },
-  {
-    name: "Wednesday",
-    present: 4000,
-    absent: 2400,
-  },
-  {
-    name: "Thrusday",
-    present: 4000,
-    absent: 2400,
-  },
-  {
-    name: "Friday",
-    present: 4000,
-    absent: 2400,
-  },
+  { name: "Monday", present: 4000, absent: 2400 },
+  { name: "Tuesday", present: 4000, absent: 2400 },
+  { name: "Wednesday", present: 4000, absent: 2400 },
+  { name: "Thursday", present: 4000, absent: 2400 },
+  { name: "Friday", present: 4000, absent: 2400 },
 ];
 
 function AttendanceChart() {
@@ -55,16 +35,16 @@ function AttendanceChart() {
         />
       </div>
       <div style={{ width: "100%", height: 400 }}>
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={data}>
+        <ResponsiveContainer width="100%" height="90%">
+          <BarChart data={data} width={700} height={300}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
+            <XAxis dataKey="name" interval={0} angle={30} textAnchor="middle" />
             <YAxis />
             <Tooltip />
-            <Legend />
+            <Legend align="left" />
 
-            <Bar dataKey="pv" fill="#8884d8" />
-            <Bar dataKey="uv" fill="#82ca9d" />
+            <Bar dataKey="present" fill="#8884d8" />
+            <Bar dataKey="absent" fill="#82ca9d" />
           </BarChart>
         </ResponsiveContainer>
       </div>
