@@ -48,30 +48,6 @@ function CountChart() {
       </div>
 
       {/*Chart */}
-      {/* <div className="relative w-full h-[300px]">
-        <RadialBarChart
-          style={{
-            width: "100%",
-            maxWidth: "700px",
-            maxHeight: "80vh",
-            aspectRatio: 1.618,
-          }}
-          // responsive
-          cx="50%"
-          barSize={32}
-          data={data}
-        >
-          <RadialBar background dataKey="count" />
-        </RadialBarChart>
-
-        <Image
-          src="/images/school-management-dashboard/maleFemale.png"
-          alt="Male and female chart icon"
-          width={40}
-          height={40}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-        />
-      </div> */}
 
       <div className="relative flex justify-center items-center h-[250px]">
         <RadialBarChart
@@ -97,21 +73,6 @@ function CountChart() {
       </div>
 
       {/*Bottom*/}
-      {/* <div className="flex justify-center gap-16">
-        <div className="flex flex-col gap-1">
-          <div className="w-5 h-5 bg-purple-400 rounded-full">
-            <h1 className="font-bold">1,450</h1>
-            <h2 className="text-sm text-gray-300">Boys (50%)</h2>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-1">
-          <div className="w-5 h-5 bg-[#F9E5C9] rounded-full">
-            <h1 className="font-bold">1,450</h1>
-            <h2 className="text-sm text-gray-300">girls (50%)</h2>
-          </div>
-        </div>
-      </div> */}
 
       <div className="flex gap-10 justify-center">
         <div className="flex flex-col items-center gap-1">
@@ -123,7 +84,7 @@ function CountChart() {
         <div className="flex flex-col items-center gap-1">
           <div className="w-3 h-3 bg-[#7B61FF] rounded-full"></div>
           <h1 className="font-bold">1,450</h1>
-          <h2 className="text-sm text-gray-500">Boys (55%)</h2>
+          <h2 className="text-sm text-gray-500">Boys (50%)</h2>
         </div>
       </div>
     </div>

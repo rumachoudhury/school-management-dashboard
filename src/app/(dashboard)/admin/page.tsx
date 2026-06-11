@@ -1,6 +1,7 @@
 import React from "react";
 import UserCart from "../../../components/UserCart";
 import CountChart from "@/src/components/CountChart";
+import AttendanceChart from "@/src/components/AttendanceChart";
 
 function AdminPage() {
   return (
@@ -23,7 +24,9 @@ function AdminPage() {
           </div>
 
           {/* Attendent Chart */}
-          <div className="w-full lg:w-2/3 h-[450px]"></div>
+          <div className="w-full lg:w-2/3 h-[450px]">
+            <AttendanceChart />
+          </div>
         </div>
         {/* Bottom Cart */}
         <div className=""></div>
