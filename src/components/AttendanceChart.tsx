@@ -24,8 +24,8 @@ const data = [
 function AttendanceChart() {
   return (
     <div className="bg-white rounded-lg p-4 h-full">
-      <div>
-        <h1 className="text-center">Attendance</h1>
+      <div className="flex flex-col  gap-3">
+        <h1 className="">Attendance</h1>
         <Image
           src="/images/school-management-dashboard/moreDark.png"
           alt=""
@@ -38,13 +38,23 @@ function AttendanceChart() {
         <ResponsiveContainer width="100%" height="90%">
           <BarChart data={data} width={700} height={300}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" interval={0} angle={30} textAnchor="middle" />
+            <XAxis
+              dataKey="name"
+              interval={0}
+              angle={30}
+              textAnchor="middle"
+              className="pt-8"
+            />
             <YAxis />
             <Tooltip />
-            <Legend align="left" />
+            <Legend
+              align="left"
+              verticalAlign="top"
+              wrapperStyle={{ paddingBottom: "50px" }}
+            />
 
-            <Bar dataKey="present" fill="#8884d8" />
-            <Bar dataKey="absent" fill="#82ca9d" />
+            <Bar dataKey="present" fill="#8884d8" legendType="circle" />
+            <Bar dataKey="absent" fill="#82ca9d" legendType="circle" />
           </BarChart>
         </ResponsiveContainer>
       </div>
