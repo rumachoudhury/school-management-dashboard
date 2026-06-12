@@ -52,9 +52,13 @@ function AttendanceChart() {
               verticalAlign="top"
               wrapperStyle={{ paddingBottom: "50px" }}
             />
-
+            {/* 
             <Bar dataKey="present" fill="#8884d8" legendType="circle" />
-            <Bar dataKey="absent" fill="#82ca9d" legendType="circle" />
+            <Bar dataKey="absent" fill="#82ca9d" legendType="circle" /> */}
+            <Bar dataKey="present" fill="#3B82F6" legendType="circle" />{" "}
+            {/* Blue */}
+            <Bar dataKey="absent" fill="#FACC15" legendType="circle" />{" "}
+            {/* Yellow */}
           </BarChart>
         </ResponsiveContainer>
       </div>
