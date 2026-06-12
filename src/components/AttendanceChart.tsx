@@ -40,24 +40,33 @@ function AttendanceChart() {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               dataKey="name"
+              axisLine={false}
+              tickLine={false}
               interval={0}
               angle={30}
               textAnchor="middle"
               className="pt-8"
             />
-            <YAxis />
+            <YAxis axisLine={false} tickLine={false} />
             <Tooltip />
             <Legend
               align="left"
               verticalAlign="top"
               wrapperStyle={{ paddingBottom: "50px" }}
             />
-            {/* 
-            <Bar dataKey="present" fill="#8884d8" legendType="circle" />
-            <Bar dataKey="absent" fill="#82ca9d" legendType="circle" /> */}
-            <Bar dataKey="present" fill="#3B82F6" legendType="circle" />{" "}
+            <Bar
+              dataKey="present"
+              fill="#3B82F6"
+              legendType="circle"
+              radius={[10, 10, 0, 0]}
+            />
             {/* Blue */}
-            <Bar dataKey="absent" fill="#FACC15" legendType="circle" />{" "}
+            <Bar
+              dataKey="absent"
+              fill="#FACC15"
+              legendType="circle"
+              radius={[10, 10, 0, 0]}
+            />{" "}
             {/* Yellow */}
           </BarChart>
         </ResponsiveContainer>
