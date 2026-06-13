@@ -1,16 +1,16 @@
 "use client";
 import Image from "next/image";
 
-// import {
-//   LineChart,
-//   Line,
-//   XAxis,
-//   YAxis,
-//   CartesianGrid,
-//   Tooltip,
-//   Legend,
-// } from "recharts";
-// import { RechartsDevtools } from "@recharts/devtools";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
 // #region Sample data
 // const data = [
@@ -79,6 +79,22 @@ const FinanceChart = () => {
           height={24}
         />
       </div>
+
+      <ResponsiveContainer width="100%" height={400}>
+        <LineChart
+          data={data}
+          margin={{ top: 5, right: 0, left: 0, bottom: 5 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+
+          <Line dataKey="income" stroke="#3B82F6" />
+          <Line dataKey="expense" stroke="#FACC15" />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 };
