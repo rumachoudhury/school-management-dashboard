@@ -29,7 +29,7 @@ function AdminPage() {
           </div>
         </div>
         {/* Bottom Cart */}
-        <div className=""></div>
+        <div className="w-full h-[500px]"></div>
       </div>
 
       {/* right */}

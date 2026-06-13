@@ -25,7 +25,7 @@ function AttendanceChart() {
   return (
     <div className="bg-white rounded-lg p-4 h-full">
       <div className="flex flex-col  gap-3">
-        <h1 className="">Attendance</h1>
+        <h1 className="text-lg font-semibold">Attendance</h1>
         <Image
           src="/images/school-management-dashboard/moreDark.png"
           alt=""
