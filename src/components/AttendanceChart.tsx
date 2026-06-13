@@ -37,17 +37,26 @@ function AttendanceChart() {
       <div style={{ width: "100%", height: 400 }}>
         <ResponsiveContainer width="100%" height="90%">
           <BarChart data={data} width={700} height={300}>
-            <CartesianGrid strokeDasharray="3 3" />
+            <CartesianGrid
+              strokeDasharray="3 3"
+              vertical={false}
+              stroke="#ddd"
+            />
             <XAxis
               dataKey="name"
               axisLine={false}
+              tick={{ fill: "#d1d5db" }}
               tickLine={false}
               interval={0}
               angle={30}
               textAnchor="middle"
               className="pt-8"
             />
-            <YAxis axisLine={false} tickLine={false} />
+            <YAxis
+              axisLine={false}
+              tick={{ fill: "#d1d5db" }}
+              tickLine={false}
+            />
             <Tooltip />
             <Legend
               align="left"
