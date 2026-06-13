@@ -59,6 +59,11 @@ const data = [
   { name: "May", income: 9800, expense: 6300 },
   { name: "Jun", income: 10500, expense: 7000 },
   { name: "Jul", income: 11200, expense: 7600 },
+  { name: "Aug", income: 11200, expense: 7600 },
+  { name: "Sep", income: 11800, expense: 7900 },
+  { name: "Oct", income: 12100, expense: 8200 },
+  { name: "Nov", income: 11500, expense: 8000 },
+  { name: "Dec", income: 13000, expense: 9000 },
 ];
 
 const FinanceChart = () => {
