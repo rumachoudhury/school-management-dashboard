@@ -57,7 +57,12 @@ function AttendanceChart() {
               tick={{ fill: "#d1d5db" }}
               tickLine={false}
             />
-            <Tooltip />
+            <Tooltip
+              contentStyle={{
+                borderRadius: "10px",
+                border: "1px solid lightgray",
+              }}
+            />
             <Legend
               align="left"
               verticalAlign="top"
