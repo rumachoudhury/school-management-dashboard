@@ -2,6 +2,7 @@ import React from "react";
 import UserCart from "../../../components/UserCart";
 import CountChart from "@/src/components/CountChart";
 import AttendanceChart from "@/src/components/AttendanceChart";
+import FinanceChart from "@/src/components/FinanceChart";
 
 function AdminPage() {
   return (
@@ -29,7 +30,9 @@ function AdminPage() {
           </div>
         </div>
         {/* Bottom Cart */}
-        <div className="w-full h-[500px]"></div>
+        <div className="w-full h-[500px]">
+          <FinanceChart />
+        </div>
       </div>
 
       {/* right */}
