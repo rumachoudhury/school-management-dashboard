@@ -86,13 +86,29 @@ const FinanceChart = () => {
           margin={{ top: 5, right: 0, left: 0, bottom: 5 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
+          {/* <XAxis dataKey="name" /> */}
+          <XAxis
+            dataKey="name"
+            axisLine={false}
+            tick={{ fill: "#d1d5db" }}
+            tickLine={false}
+          />
+          <YAxis axisLine={false} tick={{ fill: "#d1d5db" }} tickLine={false} />
+          {/* <Tooltip /> */}
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "#fff",
+              border: "1px solid #e5e7eb",
+              borderRadius: "8px",
+            }}
+          />
           <Legend />
 
-          <Line dataKey="income" stroke="#3B82F6" />
-          <Line dataKey="expense" stroke="#FACC15" />
+          {/* <Line dataKey="income" stroke="#3B82F6" />
+          <Line dataKey="expense" stroke="#FACC15" /> */}
+
+          <Line type="monotone" dataKey="income" stroke="#3B82F6" />
+          <Line type="monotone" dataKey="expense" stroke="#FACC15" />
         </LineChart>
       </ResponsiveContainer>
     </div>
