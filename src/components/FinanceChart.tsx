@@ -102,7 +102,11 @@ const FinanceChart = () => {
               borderRadius: "8px",
             }}
           />
-          <Legend />
+          <Legend
+            align="center"
+            verticalAlign="top"
+            wrapperStyle={{ paddingBottom: "50px" }}
+          />
 
           {/* <Line dataKey="income" stroke="#3B82F6" />
           <Line dataKey="expense" stroke="#FACC15" /> */}
