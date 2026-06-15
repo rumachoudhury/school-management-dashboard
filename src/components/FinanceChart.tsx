@@ -170,7 +170,7 @@ const FinanceChart = () => {
           data={data}
           margin={{ top: 5, right: 10, left: 10, bottom: 5 }}
         >
-          <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#ddd" />
 
           <XAxis
             dataKey="name"
