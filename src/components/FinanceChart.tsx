@@ -177,6 +177,7 @@ const FinanceChart = () => {
             axisLine={false}
             tickLine={false}
             tick={{ fill: "#d1d5db" }}
+            tickMargin={10}
           />
 
           <YAxis
@@ -184,6 +185,7 @@ const FinanceChart = () => {
             tickLine={false}
             tick={{ fill: "#d1d5db" }}
             tickFormatter={(value) => `$${value.toLocaleString()}`}
+            tickMargin={20}
           />
 
           <Tooltip
@@ -207,8 +209,8 @@ const FinanceChart = () => {
             name="Income"
             stroke="#3B82F6"
             strokeWidth={3}
-            dot={false}
-            activeDot={{ r: 6 }}
+            // dot={false}
+            // activeDot={{ r: 6 }}
           />
 
           <Line
@@ -217,8 +219,8 @@ const FinanceChart = () => {
             name="Expense"
             stroke="#FACC15"
             strokeWidth={3}
-            dot={false}
-            activeDot={{ r: 6 }}
+            // dot={false}
+            // activeDot={{ r: 6 }}
           />
         </LineChart>
       </ResponsiveContainer>
