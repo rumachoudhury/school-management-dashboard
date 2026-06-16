@@ -1,6 +1,5 @@
 "use client";
 
-import { title } from "process";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
@@ -14,26 +13,30 @@ type Event = {
   description: string;
 };
 
-const eventsData: Event[] = [
+const eventsData = [
   {
     id: 1,
     title: "Parent-Teacher Meeting",
     description: "Discussion with parents about student progress.",
+    time: "10:00 AM",
   },
   {
     id: 2,
     title: "Science Fair",
     description: "Students present their science projects.",
+    time: "1:30 PM",
   },
   {
     id: 3,
     title: "Sports Day",
     description: "Annual outdoor sports competition and activities.",
+    time: "9:00 AM",
   },
   {
     id: 4,
     title: "Holiday Break",
     description: "School closed for seasonal holidays.",
+    time: "All Day",
   },
 ];
 
@@ -48,6 +51,8 @@ function EventCalender() {
           <div key={event.id} className="border p-4 rounded-md">
             <h3 className="font-semibold">{event.title}</h3>
             <p className="text-sm text-gray-500">{event.description}</p>
+
+            <p className="text-sm font-medium mt-2">Time: {event.time}</p>
           </div>
         ))}
       </div>
