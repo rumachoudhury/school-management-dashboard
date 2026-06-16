@@ -30,3 +30,9 @@ body {
   border: none !important;
   font-family: "Inter", sans-serif;
 }
+
+.react-calendar__tile--active {
+  background-color: skyblue !important;
+  color: white !important;
+  border-radius: 8px;
+}
