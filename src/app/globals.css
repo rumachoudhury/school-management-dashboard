@@ -28,5 +28,5 @@ body {
 .react-calendar {
   width: 100% !important;
   border: none !important;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
 }

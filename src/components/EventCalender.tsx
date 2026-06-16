@@ -10,8 +10,8 @@ type Value = ValuePiece | [ValuePiece, ValuePiece];
 function EventCalender() {
   const [value, onChange] = useState<Value>(new Date());
   return (
-    <div className="bg-white p-4 rounded-md">
-      <Calendar onChange={onChange} value={value} />
+    <div className="bg-white p-4 rounded-md mx-2">
+      <Calendar onChange={onChange} value={value} className="react-calendar" />
     </div>
   );
 }
