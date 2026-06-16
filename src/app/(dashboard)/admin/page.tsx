@@ -3,6 +3,7 @@ import UserCart from "../../../components/UserCart";
 import CountChart from "@/src/components/CountChart";
 import AttendanceChart from "@/src/components/AttendanceChart";
 import FinanceChart from "@/src/components/FinanceChart";
+import EventCalender from "@/src/components/EventCalender";
 
 function AdminPage() {
   return (
@@ -36,7 +37,9 @@ function AdminPage() {
       </div>
 
       {/* right */}
-      <div className="w-full lg:w-1/3">R</div>
+      <div className="w-full lg:w-1/3 flex flex-col gap-8">
+        <EventCalender />
+      </div>
     </div>
   );
 }
