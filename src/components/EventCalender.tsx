@@ -42,6 +42,15 @@ function EventCalender() {
   return (
     <div className="bg-white p-4 rounded-md mx-2">
       <Calendar onChange={onChange} value={value} className="react-calendar" />
+
+      <div className="flex flex-col gap-4">
+        {eventsData.map((event) => (
+          <div key={event.id} className="border p-4 rounded-md">
+            <h3 className="font-semibold">{event.title}</h3>
+            <p className="text-sm text-gray-500">{event.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
