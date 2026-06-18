@@ -48,7 +48,7 @@ function EventCalender() {
       <Calendar onChange={onChange} value={value} className="react-calendar" />
 
       <div className="flex items-center justify-between">
-        <h1 className="text-xl font-semibold">Events</h1>
+        <h1 className="text-xl font-semibold my-4">Events</h1>
 
         <Image
           src="/images/school-management-dashboard/moreDark.png"
@@ -59,9 +59,13 @@ function EventCalender() {
       </div>
       <div className="flex flex-col gap-4">
         {eventsData.map((event) => (
-          <div key={event.id} className="border p-4 rounded-md">
+          <div
+            key={event.id}
+            // className="border-2 border-t-4 border-gray-100  odd:border-t-sky-200 even:border-t-purple-200 p-4 rounded-md"
+            className="border border-gray-100 border-t-4 odd:border-t-sky-200 even:border-t-purple-200 p-4 rounded-md"
+          >
             <div className="flex justify-between items-center">
-              <h3 className="font-semibold">{event.title}</h3>
+              <h3 className="text-xl font-semibold">{event.title}</h3>
 
               <span className="text-sm font-medium text-blue-500">
                 {event.time}
