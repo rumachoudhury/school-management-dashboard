@@ -49,10 +49,15 @@ function EventCalender() {
       <div className="flex flex-col gap-4">
         {eventsData.map((event) => (
           <div key={event.id} className="border p-4 rounded-md">
-            <h3 className="font-semibold">{event.title}</h3>
-            <p className="text-sm text-gray-500">{event.description}</p>
+            <div className="flex justify-between items-center">
+              <h3 className="font-semibold">{event.title}</h3>
 
-            <p className="text-sm font-medium mt-2">Time: {event.time}</p>
+              <span className="text-sm font-medium text-blue-500">
+                {event.time}
+              </span>
+            </div>
+
+            <p className="text-sm text-gray-500 mt-2">{event.description}</p>
           </div>
         ))}
       </div>
