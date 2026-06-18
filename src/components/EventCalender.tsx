@@ -65,9 +65,11 @@ function EventCalender() {
             className="border border-gray-100 border-t-4 odd:border-t-sky-200 even:border-t-purple-200 p-4 rounded-md"
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-xl font-semibold">{event.title}</h3>
+              <h3 className="text-gray-600 text-lg font-semibold">
+                {event.title}
+              </h3>
 
-              <span className="text-sm font-medium text-blue-500">
+              <span className="text-sm font-medium text-gray-300">
                 {event.time}
               </span>
             </div>
