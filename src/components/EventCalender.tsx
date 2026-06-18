@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
@@ -49,7 +50,12 @@ function EventCalender() {
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-semibold">Events</h1>
 
-        <Image src="/more.png" alt="More options" width={20} height={20} />
+        <Image
+          src="/images/school-management-dashboard/moreDark.png"
+          alt="More image"
+          width={20}
+          height={20}
+        />
       </div>
       <div className="flex flex-col gap-4">
         {eventsData.map((event) => (
