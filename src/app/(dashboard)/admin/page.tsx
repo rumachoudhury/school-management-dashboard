@@ -4,6 +4,7 @@ import CountChart from "@/src/components/CountChart";
 import AttendanceChart from "@/src/components/AttendanceChart";
 import FinanceChart from "@/src/components/FinanceChart";
 import EventCalender from "@/src/components/EventCalender";
+import Announcements from "@/src/components/Announcements";
 
 function AdminPage() {
   return (
@@ -39,6 +40,7 @@ function AdminPage() {
       {/* right */}
       <div className="w-full lg:w-1/3 flex flex-col gap-8">
         <EventCalender />
+        <Announcements />
       </div>
     </div>
   );

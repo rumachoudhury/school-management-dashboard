@@ -74,7 +74,7 @@ function EventCalender() {
               </span>
             </div>
 
-            <p className="text-sm text-gray-500 mt-2">{event.description}</p>
+            <p className="text-sm text-gray-400 mt-2">{event.description}</p>
           </div>
         ))}
       </div>
