@@ -46,6 +46,11 @@ function EventCalender() {
     <div className="bg-white p-4 rounded-md mx-2">
       <Calendar onChange={onChange} value={value} className="react-calendar" />
 
+      <div className="flex items-center justify-between">
+        <h1 className="text-xl font-semibold">Events</h1>
+
+        <Image src="/more.png" alt="More options" width={20} height={20} />
+      </div>
       <div className="flex flex-col gap-4">
         {eventsData.map((event) => (
           <div key={event.id} className="border p-4 rounded-md">
