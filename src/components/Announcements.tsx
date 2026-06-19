@@ -12,7 +12,18 @@ const Announcements = () => {
         <div className="bg-sky-200 rounded-md p-4">
           <div className="flex items-center justify-between">
             <h2 className="font-semibold">New School Announcement</h2>
-            <span className="text-sm text-gray-400">06-19-2026</span>
+            <span className="text-sm text-gray-400 bg-white rounded-md px-1 py-1">
+              06-19-2026
+            </span>
+          </div>
+        </div>
+
+        <div className="bg-sky-200 rounded-md p-4">
+          <div className="flex items-center justify-between">
+            <h2 className="font-semibold">Parent Meeting Reminder</h2>
+            <span className="text-sm text-gray-400 bg-white rounded-md px-1 py-1">
+              06-19-2026
+            </span>
           </div>
         </div>
       </div>
