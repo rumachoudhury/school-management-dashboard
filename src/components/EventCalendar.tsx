@@ -41,7 +41,7 @@ const eventsData = [
   },
 ];
 
-function EventCalender() {
+function EventCalendar() {
   const [value, onChange] = useState<Value>(new Date());
   return (
     <div className="bg-white p-4 rounded-md mx-2">
@@ -82,4 +82,4 @@ function EventCalender() {
   );
 }
 
-export default EventCalender;
+export default EventCalendar;
