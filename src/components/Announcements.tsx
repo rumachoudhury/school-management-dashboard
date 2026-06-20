@@ -37,10 +37,11 @@ const Announcements = () => {
         </div>
       </div> */}
 
+      {/* School Announcement card */}
       <div className="flex flex-col gap-4">
         <div className="bg-purple-200 rounded-md p-4">
           <div className="flex items-center justify-between">
-            <h2 className="font-semibold">New School Announcement</h2>
+            <h2 className="font-semibold">School Announcement</h2>
 
             <span className="text-sm text-gray-400 bg-white rounded-md px-1 py-1">
               06-19-2026
@@ -64,6 +65,35 @@ const Announcements = () => {
           <p className="text-sm text-gray-600 mt-2">
             Parents are invited to discuss student progress and upcoming
             activities.
+          </p>
+        </div>
+
+        <div className="bg-green-200 rounded-md p-4">
+          <div className="flex items-center justify-between">
+            <h2 className="font-semibold">Science Fair Event</h2>
+
+            <span className="text-sm text-gray-400 bg-white rounded-md px-1 py-1">
+              06-25-2026
+            </span>
+          </div>
+
+          <p className="text-sm text-gray-600 mt-2">
+            Students will present their science projects at the annual science
+            fair.
+          </p>
+        </div>
+
+        <div className="bg-blue-200 rounded-md p-4">
+          <div className="flex items-center justify-between">
+            <h2 className="font-semibold">Sports Day Reminder</h2>
+
+            <span className="text-sm text-gray-400 bg-white rounded-md px-1 py-1">
+              07-02-2026
+            </span>
+          </div>
+
+          <p className="text-sm text-gray-600 mt-2">
+            Annual sports activities will be held on the school playground.
           </p>
         </div>
       </div>
