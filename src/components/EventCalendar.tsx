@@ -12,9 +12,10 @@ type Event = {
   id: number;
   title: string;
   description: string;
+  time: string;
 };
 
-const eventsData = [
+const eventsData: Event[] = [
   {
     id: 1,
     title: "Parent-Teacher Meeting",
