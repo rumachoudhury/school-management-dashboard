@@ -131,10 +131,9 @@ const Menu = () => {
                 <Link
                   href={item.href}
                   key={item.label}
-                  className="flex items-center justify-center lg:justify-start gap-2 p-2 rounded-md hover:bg-gray-100"
+                  className="flex items-center justify-center lg:justify-start gap-2 p-2 rounded-md hover:bg-sky-300 md:px-2"
                 >
                   <Image src={item.icon} alt="" width={20} height={20} />
-
                   <span className="hidden lg:block">{item.label}</span>
                 </Link>
               );
