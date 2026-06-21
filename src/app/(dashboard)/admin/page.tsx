@@ -3,8 +3,8 @@ import UserCart from "../../../components/UserCart";
 import CountChart from "@/src/components/CountChart";
 import AttendanceChart from "@/src/components/AttendanceChart";
 import FinanceChart from "@/src/components/FinanceChart";
-import EventCalendar from "@/src/components/EventCalendar";
 import Announcements from "@/src/components/Announcements";
+import EventCalendar from "@/src/components/EventCalendar";
 
 function AdminPage() {
   return (
