@@ -7,7 +7,9 @@ function StudentPage() {
     <div className="p-4 flex gap-4 flex-col xl:flex-row">
       {/* Left */}
       <div className="w-ful xl:w-2/3">
-        <div className="h-full bg-white p-4 rounded-md">Schedule (4A)</div>
+        <div className="h-full bg-white p-4 rounded-md">
+          <h1 className="text-xl font-semibold">Schedule (4A)</h1>
+        </div>
       </div>
 
       {/* Right */}
