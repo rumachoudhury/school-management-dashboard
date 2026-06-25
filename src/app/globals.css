@@ -39,3 +39,7 @@ body {
   color: white !important;
   border-radius: 8px;
 }
+
+.rbc-btn-group {
+  display: none !important;
+}
