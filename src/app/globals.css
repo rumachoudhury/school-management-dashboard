@@ -43,3 +43,12 @@ body {
 .rbc-btn-group:first-child {
   display: none !important;
 }
+
+.rbc-toolbar-label {
+  text-align: right !important;
+  padding-right: 0px 20px !important;
+}
+
+.rbc-btn-group:last-child {
+  display: none !important;
+}
