@@ -40,6 +40,6 @@ body {
   border-radius: 8px;
 }
 
-.rbc-btn-group {
+.rbc-btn-group:first-child {
   display: none !important;
 }
