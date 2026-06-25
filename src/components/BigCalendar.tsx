@@ -22,7 +22,7 @@ const BigCalendar = () => {
       events={calendarEvents}
       startAccessor="start"
       endAccessor="end"
-      views={["work_week", "day", "agenda"]}
+      views={["work_week", "day"]}
       view={view}
       onView={(newView) => setView(newView)}
       min={new Date(2026, 0, 1, 8, 0)}
