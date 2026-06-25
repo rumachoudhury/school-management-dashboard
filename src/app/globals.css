@@ -51,4 +51,12 @@ body {
 
 .rbc-btn-group:last-child {
   display: none !important;
+  font-size: 13px !important;
+}
+
+.rbc-btn-group:last-child button {
+  border: none !important;
+  background: none !important;
+  color: #000 !important;
+  font-size: 13px !important;
 }
