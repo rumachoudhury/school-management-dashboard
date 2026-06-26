@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         // className={`${geistSans.variable} ${geistMono.variable}`}
         className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
-        cz-shortcut-listen="true"
+        cz-shortcut-listen="true  flex flex-col"
       >
         {children}
       </body>
