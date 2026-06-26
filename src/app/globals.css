@@ -161,3 +161,8 @@ body {
 .rbc-event:nth-child(5n + 5) {
   background-color: #ede9fe !important; /* Light Purple */
 }
+
+.rbc-event-label {
+  color: gray;
+  margin-bottom: 4px;
+}
