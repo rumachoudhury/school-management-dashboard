@@ -63,7 +63,19 @@ body {
 }
 
 .rbc-toolbar button.rbc-active {
-  background: #000 !important;
-  color: #fff !important;
+  background: #dbdafe !important;
+  /* color: #fff !important; */
   box-shadow: none;
+}
+
+.rbc-time-view {
+  border-color: #eee !important;
+}
+
+.rbc-time-header {
+  display: none !important;
+}
+
+.rbc-time-content {
+  border-top: none !important;
 }
