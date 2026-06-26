@@ -95,3 +95,13 @@ body {
 .rbc-timeslot-group:hover {
   background-color: #f5f5f5 !important;
 }
+
+.rbc-event {
+  border: none !important;
+  color: black;
+  margin: 10px !important;
+}
+
+.rbc-event:nth-child(1) {
+  background-color: #f8fbff;
+}
