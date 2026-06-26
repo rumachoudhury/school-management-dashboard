@@ -87,3 +87,11 @@ body {
 .rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
   padding: 0px 20px !important;
 }
+
+.rbc-timeslot-group {
+  background-color: #f8fbff !important;
+}
+
+.rbc-timeslot-group:hover {
+  background-color: #f5f5f5 !important;
+}
