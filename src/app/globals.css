@@ -79,3 +79,11 @@ body {
 .rbc-time-content {
   border-top: none !important;
 }
+
+.rbc-time-gutter.rbc-time-column {
+  font-size: 12px !important;
+}
+
+.rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
+  padding: 0px 20px !important;
+}
