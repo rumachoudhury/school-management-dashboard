@@ -15,7 +15,7 @@ export default function TeacherList() {
             <TableSearch />
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4 self-end">
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-100">
               <Image
                 src="/images/school-management-dashboard/filter.png"
@@ -25,9 +25,23 @@ export default function TeacherList() {
               />
             </button>
 
-            <button className="w-8 h-8 rounded-full bg-yellow-100"></button>
+            <button className="w-8 h-8 rounded-full bg-yellow-100">
+              <Image
+                src="/images/school-management-dashboard/sort.png"
+                alt="Filter"
+                width={14}
+                height={14}
+              />
+            </button>
 
-            <button className="w-8 h-8 rounded-full bg-yellow-100"></button>
+            <button className="w-8 h-8 rounded-full bg-yellow-100">
+              <Image
+                src="/images/school-management-dashboard/plus.png"
+                alt="Filter"
+                width={14}
+                height={14}
+              />
+            </button>
           </div>
         </div>
       </div>
