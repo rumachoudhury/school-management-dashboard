@@ -6,9 +6,11 @@ export default function TeacherList() {
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
       {/* Top */}
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold">All Teachers List</h2>
+        <h2 className="hidden md:block text-lg font-semibold">
+          All Teachers List
+        </h2>
 
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col md:flex-row items-center gap-4 bg-red-300">
           <div>
             <TableSearch />
           </div>

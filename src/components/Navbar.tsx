@@ -16,7 +16,7 @@ function Navbar() {
         <input
           type="text"
           placeholder="Search..."
-          className="ml-2 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-50"
+          className="ml-2 px-2 py-1 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-50"
         />
       </div>
 
