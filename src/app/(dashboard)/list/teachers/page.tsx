@@ -1,3 +1,5 @@
+import TableSearch from "@/src/components/TableSearch";
+
 export default function TeacherList() {
   return (
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
@@ -5,7 +7,9 @@ export default function TeacherList() {
       <div className="">
         <h1>All Teachers List</h1>
 
-        <div></div>
+        <div className="">
+          <TableSearch />
+        </div>
       </div>
 
       {/* List */}
