@@ -10,7 +10,7 @@ export default function TeacherList() {
           All Teachers List
         </h2>
 
-        <div className="flex flex-col md:flex-row items-center gap-4 bg-red-300">
+        <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
           <div>
             <TableSearch />
           </div>
