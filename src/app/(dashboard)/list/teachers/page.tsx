@@ -1,3 +1,4 @@
+import Pagination from "@/src/components/Pagination";
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
 
@@ -11,7 +12,7 @@ export default function TeacherList() {
         </h2>
 
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
-          <div>
+          <div className="w-64">
             <TableSearch />
           </div>
 
@@ -50,7 +51,9 @@ export default function TeacherList() {
       <div className=""></div>
 
       {/* Pagination */}
-      <div className=""></div>
+      <div className="">
+        <Pagination />
+      </div>
     </div>
   );
 }
