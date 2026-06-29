@@ -25,7 +25,7 @@ export default function TeacherList() {
               />
             </button>
 
-            <button className="w-8 h-8 rounded-full bg-yellow-100">
+            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-100">
               <Image
                 src="/images/school-management-dashboard/sort.png"
                 alt="Filter"
@@ -34,7 +34,7 @@ export default function TeacherList() {
               />
             </button>
 
-            <button className="w-8 h-8 rounded-full bg-yellow-100">
+            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-100">
               <Image
                 src="/images/school-management-dashboard/plus.png"
                 alt="Filter"
