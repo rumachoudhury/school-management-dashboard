@@ -6,7 +6,13 @@ function Pagination() {
       <button
         disabled
         className="py-2 px-4 rounded-md bg-slate-200 text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
-      ></button>
+      >
+        Prev
+      </button>
+
+      <button className="py-2 px-4 rounded-md bg-slate-200 text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed">
+        Next
+      </button>
     </div>
   );
 }
