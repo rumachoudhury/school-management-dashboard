@@ -19,6 +19,21 @@ const columns: Column[] = [
     accessor: "teacherID",
     className: "hidden md:table-cell",
   },
+  {
+    header: "Subjects",
+    accessor: "Subjects",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Classes",
+    accessor: "classes",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Phone",
+    accessor: "phone",
+    className: "hidden lg:table-cell",
+  },
 ];
 
 export default function TeacherList() {
