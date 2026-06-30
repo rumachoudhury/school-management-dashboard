@@ -10,6 +10,12 @@ type Column = {
   className?: string;
 };
 
+type Teacher = {
+  id: number;
+  teacherID: string;
+  name: string;
+};
+
 const columns: Column[] = [
   {
     header: "Info",
@@ -43,6 +49,7 @@ const columns: Column[] = [
 ];
 
 export default function TeacherList() {
+  const renderRow = (item) => {};
   return (
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
       {/* Top */}
