@@ -3,10 +3,21 @@ import Table from "@/src/components/Table";
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
 
-const columns = [
+type Column = {
+  header: string;
+  accessor: string;
+  className?: string;
+};
+
+const columns: Column[] = [
   {
     header: "Info",
     accessor: "info",
+  },
+  {
+    header: "Teacher ID",
+    accessor: "teacherID",
+    className: "hidden md:table-cell",
   },
 ];
 
