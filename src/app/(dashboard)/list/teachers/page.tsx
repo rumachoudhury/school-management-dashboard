@@ -1,6 +1,14 @@
 import Pagination from "@/src/components/Pagination";
+import Table from "@/src/components/Table";
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
+
+const columns = [
+  {
+    header: "Info",
+    accessor: "info",
+  },
+];
 
 export default function TeacherList() {
   return (
@@ -48,7 +56,9 @@ export default function TeacherList() {
       </div>
 
       {/* List */}
-      <div className=""></div>
+      <div className="">
+        <Table />
+      </div>
 
       {/* Pagination */}
       <div className="">
