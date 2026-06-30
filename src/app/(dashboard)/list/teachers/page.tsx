@@ -1,5 +1,6 @@
 import Pagination from "@/src/components/Pagination";
 import Table from "@/src/components/Table";
+
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
 
@@ -88,7 +89,7 @@ export default function TeacherList() {
 
       {/* List */}
       <div className="">
-        <Table />
+        <Table columns={columns} />
       </div>
 
       {/* Pagination */}
