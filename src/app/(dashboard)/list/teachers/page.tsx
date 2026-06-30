@@ -34,6 +34,11 @@ const columns: Column[] = [
     accessor: "phone",
     className: "hidden lg:table-cell",
   },
+  {
+    header: "Address",
+    accessor: "address",
+    className: "hidden lg:table-cell",
+  },
 ];
 
 export default function TeacherList() {
