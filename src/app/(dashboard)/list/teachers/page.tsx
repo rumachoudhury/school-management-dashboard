@@ -3,6 +3,7 @@ import Table from "@/src/components/Table";
 
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
+import Link from "next/link";
 
 type Column = {
   header: string;
@@ -69,17 +70,95 @@ const columns: Column[] = [
 ];
 
 export default function TeacherListPage() {
+  // const renderRow = (item: Teacher) => {
+  //   return (
+  //     <tr key={item.id}>
+  //       <td>
+  //         <Image
+  //           src={item.photo}
+  //           alt=""
+  //           width={40}
+  //           height={40}
+  //           className="md:hidden xl:block w-10 h-11 rounded-full object-cover"
+  //         />
+
+  //         <div className="flex flex-col md:flex-row items-start md:items-center gap-2">
+  //           <h3 className="font-semibold">{item.name}</h3>
+  //           <p className="text-sm text-gray">{item.email}</p>
+  //         </div>
+  //       </td>
+
+  //       <td className="hidden md:table-cell">{item.teacherID}</td>
+  //       <td className="hidden md:table-cell">{item.subjects.join(", ")}</td>
+  //       <td className="hidden md:table-cell">{item.classes.join(", ")}</td>
+  //       <td className="hidden lg:table-cell">{item.phone}</td>
+  //       <td className="hidden lg:table-cell">{item.adress}</td>
+
+  //       <td>
+  //         <div className="flex items-center gap-2">
+  //           <Link
+  //             href={`/list/teachers/${item.id}`}
+  //             className="text-sm text-blue-500"
+  //           >
+  //             <button className="w-7 h-7 flex items-center justify-center rounded-full">
+  //               <Image
+  //                 src="/images/school-management-dashboard/view.png"
+  //                 alt=""
+  //                 width={16}
+  //                 height={16}
+  //               />
+  //             </button>
+  //           </Link>
+  //         </div>
+  //       </td>
+  //     </tr>
+  //   );
+  // };
+
   const renderRow = (item: Teacher) => {
     return (
       <tr key={item.id}>
         <td>
-          <Image
-            src={item.photo}
-            alt=""
-            width={40}
-            height={40}
-            className="md:hidden xl:block w-10 h-11 rounded-full"
-          />
+          <Link
+            href={`/list/teachers/${item.id}`}
+            className="flex items-center gap-2"
+          >
+            <Image
+              src={item.photo}
+              alt={item.name}
+              width={40}
+              height={40}
+              className="w-10 h-10 rounded-full object-cover"
+            />
+
+            <div className="flex flex-col">
+              <h3 className="font-semibold">{item.name}</h3>
+              <p className="text-sm text-gray-500">{item.email}</p>
+            </div>
+          </Link>
+        </td>
+
+        <td className="hidden md:table-cell">{item.teacherID}</td>
+
+        <td className="hidden md:table-cell">{item.subjects.join(", ")}</td>
+
+        <td className="hidden md:table-cell">{item.classes.join(", ")}</td>
+
+        <td className="hidden lg:table-cell">{item.phone}</td>
+
+        <td className="hidden lg:table-cell">{item.adress}</td>
+
+        <td>
+          <Link href={`/list/teachers/${item.id}`}>
+            <button className="w-7 h-7 flex items-center justify-center rounded-full">
+              <Image
+                src="/images/school-management-dashboard/view.png"
+                alt="View"
+                width={16}
+                height={16}
+              />
+            </button>
+          </Link>
         </td>
       </tr>
     );
@@ -131,7 +210,7 @@ export default function TeacherListPage() {
 
       {/* List */}
       <div className="">
-        <Table columns={columns} />
+        <Table columns={columns} data={teachers} renderRow={renderRow} />
       </div>
 
       {/* Pagination */}
