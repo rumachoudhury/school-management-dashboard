@@ -22,6 +22,20 @@ type Teacher = {
   adress: string;
 };
 
+const teachers: Teacher[] = [
+  {
+    id: 1,
+    teacherID: "T001",
+    name: "John",
+    email: "john@test.com",
+    photo: "/avatar.png",
+    phone: "123456789",
+    subjects: ["Math"],
+    classes: ["5A"],
+    adress: "New York",
+  },
+];
+
 const columns: Column[] = [
   {
     header: "Info",
@@ -55,7 +69,22 @@ const columns: Column[] = [
 ];
 
 export default function TeacherListPage() {
-  const renderRow = (item) => {};
+  const renderRow = (item: Teacher) => {
+    return (
+      <tr key={item.id}>
+        <td>
+          <Image
+            src={item.photo}
+            alt=""
+            width={40}
+            height={40}
+            className="md:hidden xl:block w-10 h-11 rounded-full"
+          />
+        </td>
+      </tr>
+    );
+  };
+
   return (
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
       {/* Top */}
