@@ -93,7 +93,7 @@ export default function TeacherListPage() {
 
         <td className="hidden lg:table-cell">{item.address}</td>
 
-        <td>
+        <td className="flex items-center gap-2 justify-end">
           <Link href={`/list/teachers/${item.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
               <Image
