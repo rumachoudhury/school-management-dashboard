@@ -59,7 +59,10 @@ const columns: Column[] = [
 export default function TeacherListPage() {
   const renderRow = (item: Teacher) => {
     return (
-      <tr key={item.id} className="">
+      <tr
+        key={item.id}
+        className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purple-50 transition-colors"
+      >
         <td className="flex items-center justify-between">
           <Link
             href={`/list/teachers/${item.id}`}
