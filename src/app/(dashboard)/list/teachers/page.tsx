@@ -14,6 +14,12 @@ type Teacher = {
   id: number;
   teacherID: string;
   name: string;
+  email: string;
+  photo: string;
+  phone: string;
+  subjects: string[];
+  classes: string[];
+  adress: string;
 };
 
 const columns: Column[] = [
@@ -48,7 +54,7 @@ const columns: Column[] = [
   },
 ];
 
-export default function TeacherList() {
+export default function TeacherListPage() {
   const renderRow = (item) => {};
   return (
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
