@@ -30,8 +30,8 @@ const columns: Column[] = [
     accessor: "info",
   },
   {
-    header: "Teacher ID",
-    accessor: "teacherId",
+    header: "Student ID",
+    accessor: "studentId",
     className: "hidden md:table-cell",
   },
   {
@@ -65,7 +65,7 @@ export default function StudentListPage() {
       >
         <td className="flex items-center justify-between">
           <Link
-            href={`/list/teachers/${item.id}`}
+            href={`/list/students/${item.id}`}
             className="flex items-center gap-4 py-2"
           >
             <Image
