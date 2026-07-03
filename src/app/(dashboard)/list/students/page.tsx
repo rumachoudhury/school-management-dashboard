@@ -19,7 +19,7 @@ type Student = {
   email?: string;
   photo: string;
   phone?: string;
-  grade: string[];
+  grade: number;
   class: string;
   address: string;
 };
@@ -80,9 +80,7 @@ export default function StudentListPage() {
 
         <td className="hidden md:table-cell">{item.studentId}</td>
 
-        <td className="hidden md:table-cell">{item.grade.join(", ")}</td>
-
-        {/* <td className="hidden md:table-cell">{item.classes.join(", ")}</td> */}
+        <td className="hidden md:table-cell">{item.grade}</td>
 
         <td className="hidden lg:table-cell">{item.phone}</td>
 
