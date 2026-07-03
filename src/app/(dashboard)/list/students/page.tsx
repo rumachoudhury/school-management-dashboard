@@ -16,11 +16,11 @@ type Student = {
   id: number;
   studentId: string;
   name: string;
-  email: string;
+  email?: string;
   photo: string;
-  phone: string;
-  subjects: string[];
-  classes: string[];
+  phone?: string;
+  grade: string[];
+  class: string;
   address: string;
 };
 
@@ -35,13 +35,8 @@ const columns: Column[] = [
     className: "hidden md:table-cell",
   },
   {
-    header: "Subjects",
-    accessor: "Subjects",
-    className: "hidden md:table-cell",
-  },
-  {
-    header: "Classes",
-    accessor: "classes",
+    header: "Grade",
+    accessor: "grade",
     className: "hidden md:table-cell",
   },
   {
@@ -78,23 +73,23 @@ export default function StudentListPage() {
 
             <div className="flex flex-col">
               <h3 className="font-semibold">{item.name}</h3>
-              <p className="text-sm text-gray-500">{item.email}</p>
+              <p className="text-sm text-gray-500">{item.class}</p>
             </div>
           </Link>
         </td>
 
         <td className="hidden md:table-cell">{item.studentId}</td>
 
-        <td className="hidden md:table-cell">{item.subjects.join(", ")}</td>
+        <td className="hidden md:table-cell">{item.grade.join(", ")}</td>
 
-        <td className="hidden md:table-cell">{item.classes.join(", ")}</td>
+        {/* <td className="hidden md:table-cell">{item.classes.join(", ")}</td> */}
 
         <td className="hidden lg:table-cell">{item.phone}</td>
 
         <td className="hidden lg:table-cell">{item.address}</td>
 
         <td className="flex items-center gap-2 justify-end">
-          <Link href={`/list/teachers/${item.id}`}>
+          <Link href={`/list/students/${item.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
               <Image
                 src="/images/school-management-dashboard/view.png"

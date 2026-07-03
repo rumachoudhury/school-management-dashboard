@@ -35,8 +35,13 @@ const columns: Column[] = [
     className: "hidden md:table-cell",
   },
   {
-    header: "Grade",
-    accessor: "grade",
+    header: "Subjects",
+    accessor: "Subjects",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Classes",
+    accessor: "classes",
     className: "hidden md:table-cell",
   },
   {
