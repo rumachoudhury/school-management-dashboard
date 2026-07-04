@@ -4,7 +4,7 @@ import Table from "@/src/components/Table";
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
 import Link from "next/link";
-import { role, subjectsData } from "@/src/lib/data";
+import { role, classesData } from "@/src/lib/data";
 
 type Column = {
   header: string;
@@ -20,13 +20,39 @@ type Class = {
   supervisor: string;
 };
 
+// const columns: Column[] = [
+//   {
+//     header: "Class Names",
+//     accessor: "name",
+//   },
+//   {
+//     header: "capacity",
+//     accessor: "capacity",
+//   },
+//   {
+//     header: "Grade",
+//     accessor: "grade",
+//     className: "hidden md:table-cell",
+//   },
+//   {
+//     header: "Supervisor",
+//     accessor: "supervisor",
+//     className: "hidden md:table-cell",
+//   },
+//   {
+//     header: "Actions",
+//     accessor: "action",
+//     className: "text-right",
+//   },
+// ];
+
 const columns: Column[] = [
   {
     header: "Class Names",
     accessor: "name",
   },
   {
-    header: "capacity",
+    header: "Capacity",
     accessor: "capacity",
   },
   {
@@ -45,21 +71,63 @@ const columns: Column[] = [
     className: "text-right",
   },
 ];
-
 export default function ClassListPage() {
+  //   const renderRow = (item: Class) => {
+  //     return (
+  //       <tr
+  //         key={item.id}
+  //         className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purple-50"
+  //       >
+  //         <td className="p-3 ">{item.name}</td>
+
+  //         <td className="hidden md:table-cell">{item.supervisor}</td>
+
+  //         <td>
+  //           <div className="flex items-center gap-2 justify-end">
+  //             <Link href={`/list/classes/${item.id}`}>
+  //               <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
+  //                 <Image
+  //                   src="/images/school-management-dashboard/view.png"
+  //                   alt="View"
+  //                   width={16}
+  //                   height={16}
+  //                 />
+  //               </button>
+  //             </Link>
+
+  //             {role === "admin" && (
+  //               <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple-100">
+  //                 <Image
+  //                   src="/images/school-management-dashboard/delete.png"
+  //                   alt="Delete"
+  //                   width={16}
+  //                   height={16}
+  //                 />
+  //               </button>
+  //             )}
+  //           </div>
+  //         </td>
+  //       </tr>
+  //     );
+  //   };
+
   const renderRow = (item: Class) => {
     return (
       <tr
         key={item.id}
-        className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purple-50"
+        className="border-b border-gray-200 text-sm hover:bg-gray-50"
       >
-        <td className="p-3 ">{item.name}</td>
+        <td className="p-4">{item.name}</td>
 
-        <td className="hidden md:table-cell">{item.teachers.join(", ")}</td>
+        <td className="p-4">{item.capacity}</td>
+
+        <td className="hidden md:table-cell">{item.grade}</td>
+
+        <td className="hidden md:table-cell">{item.supervisor}</td>
 
         <td>
           <div className="flex items-center gap-2 justify-end">
-            <Link href={`/list/subjects/${item.id}`}>
+            <Link href={`/list/classes/${item.id}`}>
               <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
                 <Image
                   src="/images/school-management-dashboard/view.png"
@@ -134,7 +202,7 @@ export default function ClassListPage() {
 
       {/* List */}
       <div className="">
-        <Table columns={columns} data={subjectsData} renderRow={renderRow} />
+        <Table columns={columns} data={classesData} renderRow={renderRow} />
       </div>
 
       {/* Pagination */}
