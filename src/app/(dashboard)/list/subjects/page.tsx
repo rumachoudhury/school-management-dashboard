@@ -43,7 +43,7 @@ export default function SubjectListPage() {
         key={item.id}
         className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purple-50"
       >
-        <td className="p-3">{item.name}</td>
+        <td className="p-3 ">{item.name}</td>
 
         <td className="hidden md:table-cell">{item.teachers.join(", ")}</td>
 
@@ -124,7 +124,6 @@ export default function SubjectListPage() {
 
       {/* List */}
       <div className="">
-        {/* <Table columns={columns} data={teachers} renderRow={renderRow} /> */}
         <Table columns={columns} data={subjectsData} renderRow={renderRow} />
       </div>
 
