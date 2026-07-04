@@ -12,40 +12,31 @@ type Column = {
   className?: string;
 };
 
-type Parent = {
+type Subject = {
   id: number;
   name: string;
-  students: string[];
-  phone?: string;
-  email?: string;
-  address: string;
+  teachers: string[];
 };
 
 const columns: Column[] = [
   {
-    header: "Info",
-    accessor: "info",
+    header: "Subject Names",
+    accessor: "name",
   },
   {
-    header: "Student names",
-    accessor: "students",
+    header: "Teachers",
+    accessor: "teachers",
     className: "hidden md:table-cell",
   },
 
   {
-    header: "Phone",
-    accessor: "phone",
-    className: "hidden lg:table-cell",
-  },
-  {
-    header: "Address",
-    accessor: "address",
-    className: "hidden lg:table-cell",
+    header: "Actions",
+    accessor: "action",
   },
 ];
 
 export default function SubjectListPage() {
-  const renderRow = (item: Parent) => {
+  const renderRow = (item: Subject) => {
     return (
       <tr
         key={item.id}
@@ -146,7 +137,7 @@ export default function SubjectListPage() {
       {/* List */}
       <div className="">
         {/* <Table columns={columns} data={teachers} renderRow={renderRow} /> */}
-        <Table columns={columns} data={parentsData} renderRow={renderRow} />
+        <Table columns={columns} data={subjectsData} renderRow={renderRow} />
       </div>
 
       {/* Pagination */}
