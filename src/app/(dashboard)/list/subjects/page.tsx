@@ -36,47 +36,116 @@ const columns: Column[] = [
 ];
 
 export default function SubjectListPage() {
+  //   const renderRow = (item: Subject) => {
+  //     return (
+  //       <tr
+  //         key={item.id}
+  //         className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purple-50 transition-colors"
+  //       >
+  //         <td className="font-semibold">{item.name}</td>
+  //         <td className="text-sm text-gray-500">{item.teachers.join(", ")}</td>
+
+  //         {/*
+  //         <td className="flex items-center justify-between">
+  //           <Link
+  //             href={`/list/subjects/${item.id}`}
+  //             className="flex items-center gap-4 py-2"
+  //           >
+  //             <div className="flex flex-col">
+  //               <h3 className="font-semibold">{item.name}</h3>
+  //               <p className="text-sm text-gray-500">
+  //                 {item.teachers.join(", ")}
+  //               </p>
+  //             </div>
+  //           </Link>
+  //         </td> */}
+
+  //         <td className="flex items-center gap-2 justify-end">
+  //           <Link href={`/list/subjects/${item.id}`}>
+  //             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
+  //               <Image
+  //                 src="/images/school-management-dashboard/view.png"
+  //                 alt="View"
+  //                 width={16}
+  //                 height={16}
+  //               />
+  //             </button>
+  //           </Link>
+  //           {role === "admin" && (
+  //             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple-100">
+  //               <Image
+  //                 src="/images/school-management-dashboard/delete.png"
+  //                 alt="View"
+  //                 width={16}
+  //                 height={16}
+  //               />
+  //             </button>
+  //           )}
+  //         </td>
+  //       </tr>
+  //     );
+  //   };
+
   const renderRow = (item: Subject) => {
     return (
       <tr
         key={item.id}
-        className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purple-50 transition-colors"
+        className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purple-50"
       >
-        <td className="flex items-center justify-between">
-          <Link
-            href={`/list/students/${item.id}`}
-            className="flex items-center gap-4 py-2"
-          >
-            <div className="flex flex-col">
-              <h3 className="font-semibold">{item.name}</h3>
-              <p className="text-sm text-gray-500">
-                {item.teachers.join(", ")}
-              </p>
-            </div>
-          </Link>
-        </td>
+        <td>{item.name}</td>
 
-        <td className="flex items-center gap-2 justify-end">
-          <Link href={`/list/subjects/${item.id}`}>
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
-              <Image
-                src="/images/school-management-dashboard/view.png"
-                alt="View"
-                width={16}
-                height={16}
-              />
-            </button>
-          </Link>
-          {role === "admin" && (
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple-100">
-              <Image
-                src="/images/school-management-dashboard/delete.png"
-                alt="View"
-                width={16}
-                height={16}
-              />
-            </button>
-          )}
+        <td className="hidden md:table-cell">{item.teachers.join(", ")}</td>
+
+        {/* <td>
+          <div className="flex items-center gap-2 justify-end">
+            <Link href={`/list/subjects/${item.id}`}>
+              <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
+                <Image
+                  src="/images/school-management-dashboard/view.png"
+                  alt="View"
+                  width={16}
+                  height={16}
+                />
+              </button>
+            </Link>
+
+            {role === "admin" && (
+              <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple-100">
+                <Image
+                  src="/images/school-management-dashboard/delete.png"
+                  alt="Delete"
+                  width={16}
+                  height={16}
+                />
+              </button>
+            )}
+          </div>
+        </td> */}
+
+        <td>
+          <div className="flex items-center gap-2 justify-end">
+            <Link href={`/list/subjects/${item.id}`}>
+              <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
+                <Image
+                  src="/images/school-management-dashboard/view.png"
+                  alt="View"
+                  width={16}
+                  height={16}
+                />
+              </button>
+            </Link>
+
+            {role === "admin" && (
+              <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple-100">
+                <Image
+                  src="/images/school-management-dashboard/delete.png"
+                  alt="Delete"
+                  width={16}
+                  height={16}
+                />
+              </button>
+            )}
+          </div>
         </td>
       </tr>
     );
