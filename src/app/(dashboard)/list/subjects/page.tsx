@@ -44,7 +44,7 @@ const columns: Column[] = [
   },
 ];
 
-export default function ParentListPage() {
+export default function SubjectListPage() {
   const renderRow = (item: Parent) => {
     return (
       <tr
