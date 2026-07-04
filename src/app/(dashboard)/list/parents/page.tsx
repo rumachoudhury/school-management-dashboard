@@ -42,6 +42,11 @@ const columns: Column[] = [
     accessor: "address",
     className: "hidden lg:table-cell",
   },
+  {
+    header: "Actions",
+    accessor: "action",
+    className: "text-right",
+  },
 ];
 
 export default function ParentListPage() {
@@ -71,7 +76,7 @@ export default function ParentListPage() {
 
         <td className="flex items-center gap-2 justify-end">
           <Link href={`/list/parents/${item.id}`}>
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
+            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100 mt-2">
               <Image
                 src="/images/school-management-dashboard/view.png"
                 alt="View"
@@ -81,7 +86,7 @@ export default function ParentListPage() {
             </button>
           </Link>
           {role === "admin" && (
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple-100">
+            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple-100 mt-2">
               <Image
                 src="/images/school-management-dashboard/delete.png"
                 alt="View"
