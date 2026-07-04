@@ -4,7 +4,7 @@ import Table from "@/src/components/Table";
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
 import Link from "next/link";
-import { role, studentsData } from "@/src/lib/data";
+import { role, parentsData } from "@/src/lib/data";
 
 type Column = {
   header: string;
@@ -27,15 +27,11 @@ const columns: Column[] = [
     accessor: "info",
   },
   {
-    header: "Student ID",
-    accessor: "studentId",
+    header: "Student names",
+    accessor: "students",
     className: "hidden md:table-cell",
   },
-  {
-    header: "Grade",
-    accessor: "grade",
-    className: "hidden md:table-cell",
-  },
+
   {
     header: "Phone",
     accessor: "phone",
@@ -49,7 +45,7 @@ const columns: Column[] = [
 ];
 
 export default function ParentListPage() {
-  const renderRow = (item: Student) => {
+  const renderRow = (item: Parent) => {
     return (
       <tr
         key={item.id}
@@ -70,14 +66,14 @@ export default function ParentListPage() {
 
             <div className="flex flex-col">
               <h3 className="font-semibold">{item.name}</h3>
-              <p className="text-sm text-gray-500">{item.class}</p>
+              <p className="text-sm text-gray-500">{item.email}</p>
             </div>
           </Link>
         </td>
 
-        <td className="hidden md:table-cell">{item.studentId}</td>
+        <td className="hidden md:table-cell">{item.students.join(", ")}</td>
 
-        <td className="hidden md:table-cell">{item.grade}</td>
+        {/* <td className="hidden md:table-cell">{item.grade}</td> */}
 
         <td className="hidden lg:table-cell">{item.phone}</td>
 
@@ -114,7 +110,7 @@ export default function ParentListPage() {
       {/* Top */}
       <div className="flex items-center justify-between">
         <h2 className="hidden md:block text-lg font-semibold">
-          All Student List
+          All Parent List
         </h2>
 
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
@@ -158,7 +154,7 @@ export default function ParentListPage() {
       {/* List */}
       <div className="">
         {/* <Table columns={columns} data={teachers} renderRow={renderRow} /> */}
-        <Table columns={columns} data={studentsData} renderRow={renderRow} />
+        <Table columns={columns} data={parentsData} renderRow={renderRow} />
       </div>
 
       {/* Pagination */}
