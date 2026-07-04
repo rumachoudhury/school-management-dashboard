@@ -4,7 +4,7 @@ import Table from "@/src/components/Table";
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
 import Link from "next/link";
-import { role, parentsData } from "@/src/lib/data";
+import { role, subjectsData } from "@/src/lib/data";
 
 type Column = {
   header: string;
@@ -49,21 +49,15 @@ export default function SubjectListPage() {
           >
             <div className="flex flex-col">
               <h3 className="font-semibold">{item.name}</h3>
-              <p className="text-sm text-gray-500">{item.email}</p>
+              <p className="text-sm text-gray-500">
+                {item.teachers.join(", ")}
+              </p>
             </div>
           </Link>
         </td>
 
-        <td className="hidden md:table-cell">{item.students.join(", ")}</td>
-
-        {/* <td className="hidden md:table-cell">{item.grade}</td> */}
-
-        <td className="hidden lg:table-cell">{item.phone}</td>
-
-        <td className="hidden lg:table-cell">{item.address}</td>
-
         <td className="flex items-center gap-2 justify-end">
-          <Link href={`/list/students/${item.id}`}>
+          <Link href={`/list/subjects/${item.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
               <Image
                 src="/images/school-management-dashboard/view.png"
@@ -93,7 +87,7 @@ export default function SubjectListPage() {
       {/* Top */}
       <div className="flex items-center justify-between">
         <h2 className="hidden md:block text-lg font-semibold">
-          All Parent List
+          All Subject List
         </h2>
 
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">

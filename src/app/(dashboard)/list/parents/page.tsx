@@ -65,14 +65,12 @@ export default function ParentListPage() {
 
         <td className="hidden md:table-cell">{item.students.join(", ")}</td>
 
-        {/* <td className="hidden md:table-cell">{item.grade}</td> */}
-
         <td className="hidden lg:table-cell">{item.phone}</td>
 
         <td className="hidden lg:table-cell">{item.address}</td>
 
         <td className="flex items-center gap-2 justify-end">
-          <Link href={`/list/students/${item.id}`}>
+          <Link href={`/list/parents/${item.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
               <Image
                 src="/images/school-management-dashboard/view.png"
