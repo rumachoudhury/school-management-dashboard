@@ -20,32 +20,6 @@ type Class = {
   supervisor: string;
 };
 
-// const columns: Column[] = [
-//   {
-//     header: "Class Names",
-//     accessor: "name",
-//   },
-//   {
-//     header: "capacity",
-//     accessor: "capacity",
-//   },
-//   {
-//     header: "Grade",
-//     accessor: "grade",
-//     className: "hidden md:table-cell",
-//   },
-//   {
-//     header: "Supervisor",
-//     accessor: "supervisor",
-//     className: "hidden md:table-cell",
-//   },
-//   {
-//     header: "Actions",
-//     accessor: "action",
-//     className: "text-right",
-//   },
-// ];
-
 const columns: Column[] = [
   {
     header: "Class Names",
@@ -72,7 +46,7 @@ const columns: Column[] = [
     className: "text-right",
   },
 ];
-export default function ClassListPage() {
+export default function LessonListPage() {
   const renderRow = (item: Class) => {
     return (
       <tr
