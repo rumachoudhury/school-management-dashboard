@@ -52,17 +52,14 @@ export default function LessonListPage() {
         key={item.id}
         className="border-b border-gray-200 text-sm hover:bg-gray-50"
       >
-        <td className="p-4">{item.name}</td>
+        <td className="p-4">{item.subject}</td>
 
-        <td className="p-4">{item.capacity}</td>
+        <td className="p-4">{item.class}</td>
 
-        <td className="hidden md:table-cell">{item.grade}</td>
-
-        <td className="hidden md:table-cell">{item.supervisor}</td>
+        <td className="hidden md:table-cell">{item.teacher}</td>
 
         <td>
           <div className="flex items-center gap-2 justify-end">
-            {/* <Link href={`/list/classes/${item.id}`}> */}
             <Link href={`/list/lessons/${item.id}`}>
               <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
                 <Image
