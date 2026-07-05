@@ -14,10 +14,9 @@ type Column = {
 
 type Lesson = {
   id: number;
-  name: string;
-  capacity: number;
-  grade: number;
-  supervisor: string;
+  subject: string;
+  class: string;
+  teacher: string;
 };
 
 const columns: Column[] = [
