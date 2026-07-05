@@ -4,7 +4,7 @@ import Table from "@/src/components/Table";
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
 import Link from "next/link";
-import { role, classesData } from "@/src/lib/data";
+import { role, lessonsData } from "@/src/lib/data";
 
 type Column = {
   header: string;
@@ -12,7 +12,7 @@ type Column = {
   className?: string;
 };
 
-type Class = {
+type Lesson = {
   id: number;
   name: string;
   capacity: number;
@@ -47,7 +47,7 @@ const columns: Column[] = [
   },
 ];
 export default function LessonListPage() {
-  const renderRow = (item: Class) => {
+  const renderRow = (item: Lesson) => {
     return (
       <tr
         key={item.id}
@@ -63,7 +63,8 @@ export default function LessonListPage() {
 
         <td>
           <div className="flex items-center gap-2 justify-end">
-            <Link href={`/list/classes/${item.id}`}>
+            {/* <Link href={`/list/classes/${item.id}`}> */}
+            <Link href={`/list/lessons/${item.id}`}>
               <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
                 <Image
                   src="/images/school-management-dashboard/view.png"
@@ -95,7 +96,7 @@ export default function LessonListPage() {
       {/* Top */}
       <div className="flex items-center justify-between">
         <h2 className="hidden md:block text-lg font-semibold">
-          All Class List
+          All Lesson List
         </h2>
 
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
@@ -138,7 +139,7 @@ export default function LessonListPage() {
 
       {/* List */}
       <div className="">
-        <Table columns={columns} data={classesData} renderRow={renderRow} />
+        <Table columns={columns} data={lessonsData} renderRow={renderRow} />
       </div>
 
       {/* Pagination */}
