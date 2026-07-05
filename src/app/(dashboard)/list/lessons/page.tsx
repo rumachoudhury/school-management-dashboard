@@ -21,22 +21,16 @@ type Lesson = {
 
 const columns: Column[] = [
   {
-    header: "Class Names",
-    accessor: "name",
+    header: "Subject Names",
+    accessor: "subject",
   },
   {
-    header: "Capacity",
-    accessor: "capacity",
-    className: "hidden md:table-cell",
+    header: "Class",
+    accessor: "classRoom",
   },
   {
-    header: "Grade",
-    accessor: "grade",
-    className: "hidden md:table-cell",
-  },
-  {
-    header: "Supervisor",
-    accessor: "supervisor",
+    header: "Teacher",
+    accessor: "teacher",
     className: "hidden md:table-cell",
   },
   {
