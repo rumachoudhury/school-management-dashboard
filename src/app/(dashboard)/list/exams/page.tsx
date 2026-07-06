@@ -12,10 +12,10 @@ type Column = {
   className?: string;
 };
 
-type Lesson = {
+type Exam = {
   id: number;
   subject: string;
-  classRoom: string;
+  class: string;
   teacher: string;
 };
 
@@ -39,8 +39,8 @@ const columns: Column[] = [
     className: "text-right",
   },
 ];
-export default function LessonListPage() {
-  const renderRow = (item: Lesson) => {
+export default function ExamListPage() {
+  const renderRow = (item: Exam) => {
     return (
       <tr
         key={item.id}
@@ -48,7 +48,7 @@ export default function LessonListPage() {
       >
         <td className="p-4">{item.subject}</td>
 
-        <td className="p-4">{item.classRoom}</td>
+        <td className="p-4">{item.class}</td>
 
         <td className="hidden md:table-cell">{item.teacher}</td>
 
