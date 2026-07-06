@@ -15,7 +15,7 @@ type Column = {
 type Lesson = {
   id: number;
   subject: string;
-  classRoom: string;
+  class: string;
   teacher: string;
 };
 
@@ -26,7 +26,7 @@ const columns: Column[] = [
   },
   {
     header: "Class",
-    accessor: "classRoom",
+    accessor: "class",
   },
   {
     header: "Teacher",
@@ -48,7 +48,7 @@ export default function LessonListPage() {
       >
         <td className="p-4">{item.subject}</td>
 
-        <td className="p-4">{item.classRoom}</td>
+        <td className="p-4">{item.class}</td>
 
         <td className="hidden md:table-cell">{item.teacher}</td>
 

@@ -4,7 +4,7 @@ import Table from "@/src/components/Table";
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
 import Link from "next/link";
-import { role, lessonsData } from "@/src/lib/data";
+import { role, examsData } from "@/src/lib/data";
 
 type Column = {
   header: string;
@@ -26,7 +26,7 @@ const columns: Column[] = [
   },
   {
     header: "Class",
-    accessor: "classRoom",
+    accessor: "class",
   },
   {
     header: "Teacher",
@@ -129,7 +129,7 @@ export default function ExamListPage() {
 
       {/* List */}
       <div className="">
-        <Table columns={columns} data={lessonsData} renderRow={renderRow} />
+        <Table columns={columns} data={examsData} renderRow={renderRow} />
       </div>
 
       {/* Pagination */}
