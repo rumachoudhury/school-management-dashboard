@@ -57,7 +57,7 @@ export default function LessonListPage() {
             <Link href={`/list/lessons/${item.id}`}>
               <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
                 <Image
-                  src="/images/school-management-dashboard/view.png"
+                  src="/images/school-management-dashboard/edit.png"
                   alt="View"
                   width={16}
                   height={16}
