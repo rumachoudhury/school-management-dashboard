@@ -4,7 +4,7 @@ import Table from "@/src/components/Table";
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
 import Link from "next/link";
-import { role, examsData } from "@/src/lib/data";
+import { role, assignmentsData } from "@/src/lib/data";
 
 type Column = {
   header: string;
@@ -57,12 +57,13 @@ export default function AssignmentListPage() {
 
         <td className="p-4">{item.class}</td>
 
-        <td className="hidden md:table-cell">{item.teacher}</td>
         <td className="hidden md:table-cell">{item.dueDate}</td>
+
+        <td className="hidden md:table-cell">{item.teacher}</td>
 
         <td>
           <div className="flex items-center gap-2 justify-end">
-            <Link href={`/list/lessons/${item.id}`}>
+            <Link href={`/list/assignments/${item.id}`}>
               <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
                 <Image
                   src="/images/school-management-dashboard/edit.png"
