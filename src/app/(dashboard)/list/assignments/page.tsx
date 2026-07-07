@@ -30,8 +30,8 @@ const columns: Column[] = [
     accessor: "class",
   },
   {
-    header: "Date",
-    accessor: "date",
+    header: "Due Date",
+    accessor: "due date",
     className: "hidden md:table-cell",
   },
   {
