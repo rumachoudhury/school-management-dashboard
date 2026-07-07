@@ -18,6 +18,7 @@ type Assignment = {
   class: string;
   teacher: string;
   date: string;
+  dueDate: string;
 };
 
 const columns: Column[] = [
@@ -31,7 +32,7 @@ const columns: Column[] = [
   },
   {
     header: "Due Date",
-    accessor: "due date",
+    accessor: "dueDate",
     className: "hidden md:table-cell",
   },
   {
@@ -57,6 +58,7 @@ export default function AssignmentListPage() {
         <td className="p-4">{item.class}</td>
 
         <td className="hidden md:table-cell">{item.teacher}</td>
+        <td className="hidden md:table-cell">{item.dueDate}</td>
 
         <td>
           <div className="flex items-center gap-2 justify-end">
