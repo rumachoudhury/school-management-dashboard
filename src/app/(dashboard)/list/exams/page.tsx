@@ -17,6 +17,7 @@ type Exam = {
   subject: string;
   class: string;
   teacher: string;
+  date: string;
 };
 
 const columns: Column[] = [
@@ -27,6 +28,11 @@ const columns: Column[] = [
   {
     header: "Class",
     accessor: "class",
+  },
+  {
+    header: "Date",
+    accessor: "date",
+    className: "hidden md:table-cell",
   },
   {
     header: "Teacher",
