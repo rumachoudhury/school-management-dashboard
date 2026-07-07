@@ -12,12 +12,20 @@ type Column = {
   className?: string;
 };
 
+// type Assignment = {
+//   id: number;
+//   subject: string;
+//   class: string;
+//   teacher: string;
+//   date: string;
+//   dueDate: string;
+// };
+
 type Assignment = {
   id: number;
   subject: string;
   class: string;
   teacher: string;
-  date: string;
   dueDate: string;
 };
 
