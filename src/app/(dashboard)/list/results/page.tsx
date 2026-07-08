@@ -75,7 +75,7 @@ export default function ResultListPage() {
 
         <td className="p-4">{item.class}</td>
 
-        <td className="hidden md:table-cell">{item.student}</td>
+        <td className="">{item.student}</td>
 
         <td className="hidden md:table-cell">{item.teacher}</td>
 
