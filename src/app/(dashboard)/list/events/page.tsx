@@ -14,39 +14,21 @@ type Column = {
 
 type Event = {
   id: number;
-  subject: string;
+  title: string;
   class: string;
-  teacher: string;
-  student: string;
-  type: string;
   date: string;
-  score: number;
+  startTime: string;
+  endTime: string;
 };
 
 const columns: Column[] = [
   {
-    header: "Subject Names",
-    accessor: "subject",
+    header: "Title",
+    accessor: "title",
   },
   {
     header: "Class",
     accessor: "class",
-  },
-
-  {
-    header: "Teacher",
-    accessor: "teacher",
-    className: "hidden md:table-cell",
-  },
-  {
-    header: "Student",
-    accessor: "student",
-    className: "hidden md:table-cell",
-  },
-  {
-    header: "Type",
-    accessor: "type",
-    className: "hidden md:table-cell",
   },
   {
     header: "Date",
@@ -54,8 +36,13 @@ const columns: Column[] = [
     className: "hidden md:table-cell",
   },
   {
-    header: "Score",
-    accessor: "score",
+    header: "Start Time",
+    accessor: "startTime",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "End Time",
+    accessor: "endTime",
     className: "hidden md:table-cell",
   },
   {
