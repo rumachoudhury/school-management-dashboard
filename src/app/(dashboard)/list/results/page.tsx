@@ -19,6 +19,7 @@ type Result = {
   teacher: string;
   student: string;
   type: string;
+  date: string;
   score: number;
 };
 
@@ -48,6 +49,11 @@ const columns: Column[] = [
     className: "hidden md:table-cell",
   },
   {
+    header: "Date",
+    accessor: "date",
+    className: "hidden md:table-cell",
+  },
+  {
     header: "Score",
     accessor: "score",
     className: "hidden md:table-cell",
@@ -74,6 +80,8 @@ export default function ResultListPage() {
         <td className="hidden md:table-cell">{item.teacher}</td>
 
         <td className="hidden md:table-cell">{item.type}</td>
+
+        <td className="hidden md:table-cell">{item.date}</td>
 
         <td className="hidden md:table-cell">{item.score}</td>
 
