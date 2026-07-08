@@ -4,7 +4,7 @@ import Table from "@/src/components/Table";
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
 import Link from "next/link";
-import { role, resultsData } from "@/src/lib/data";
+import { role, eventsData } from "@/src/lib/data";
 
 type Column = {
   header: string;
@@ -12,7 +12,7 @@ type Column = {
   className?: string;
 };
 
-type Result = {
+type Event = {
   id: number;
   subject: string;
   class: string;
@@ -64,8 +64,8 @@ const columns: Column[] = [
     className: "text-right",
   },
 ];
-export default function ResultListPage() {
-  const renderRow = (item: Result) => {
+export default function EventListPage() {
+  const renderRow = (item: Event) => {
     return (
       <tr
         key={item.id}
@@ -162,7 +162,7 @@ export default function ResultListPage() {
 
       {/* List */}
       <div className="">
-        <Table columns={columns} data={resultsData} renderRow={renderRow} />
+        <Table columns={columns} data={eventsData} renderRow={renderRow} />
       </div>
 
       {/* Pagination */}
