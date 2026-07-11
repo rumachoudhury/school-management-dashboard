@@ -64,14 +64,6 @@ export default function EventListPage() {
 
         <td className="">{item.endTime}</td>
 
-        {/* <td className="hidden md:table-cell">{item.teacher}</td> */}
-
-        {/* <td className="hidden md:table-cell">{item.type}</td> */}
-
-        {/* <td className="hidden md:table-cell">{item.date}</td> */}
-
-        {/* <td className="hidden md:table-cell">{item.score}</td> */}
-
         <td>
           <div className="flex items-center gap-2 justify-end">
             <Link href={`/list/assignments/${item.id}`}>
@@ -106,7 +98,7 @@ export default function EventListPage() {
       {/* Top */}
       <div className="flex items-center justify-between">
         <h2 className="hidden md:block text-lg font-semibold">
-          All Assignments List
+          All Event List
         </h2>
 
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
