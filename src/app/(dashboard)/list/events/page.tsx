@@ -58,19 +58,19 @@ export default function EventListPage() {
         key={item.id}
         className="border-b border-gray-200 text-sm hover:bg-gray-50"
       >
-        <td className="p-4">{item.subject}</td>
+        <td className="p-4">{item.date}</td>
 
-        <td className="p-4">{item.class}</td>
+        <td className="p-4">{item.startTime}</td>
 
-        <td className="">{item.student}</td>
+        <td className="">{item.endTime}</td>
 
-        <td className="hidden md:table-cell">{item.teacher}</td>
+        {/* <td className="hidden md:table-cell">{item.teacher}</td> */}
 
-        <td className="hidden md:table-cell">{item.type}</td>
+        {/* <td className="hidden md:table-cell">{item.type}</td> */}
 
-        <td className="hidden md:table-cell">{item.date}</td>
+        {/* <td className="hidden md:table-cell">{item.date}</td> */}
 
-        <td className="hidden md:table-cell">{item.score}</td>
+        {/* <td className="hidden md:table-cell">{item.score}</td> */}
 
         <td>
           <div className="flex items-center gap-2 justify-end">
