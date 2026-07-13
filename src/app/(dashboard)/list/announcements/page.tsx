@@ -16,7 +16,7 @@ type Announcement = {
   title: string;
   class: string;
   date: string;
-  description: string;
+  //   description: string;
 };
 
 const columns: Column[] = [
@@ -33,11 +33,11 @@ const columns: Column[] = [
     accessor: "date",
     className: "hidden md:table-cell",
   },
-  {
-    header: "Description",
-    accessor: "description",
-    className: "hidden md:table-cell",
-  },
+  //   {
+  //     header: "Description",
+  //     accessor: "description",
+  //     className: "hidden md:table-cell",
+  //   },
   {
     header: "Actions",
     accessor: "action",
@@ -58,7 +58,7 @@ export default function AnnouncementListPage() {
 
         <td className="p-4 hidden md:table-cell">{item.date}</td>
 
-        <td className="p-4 hidden md:table-cell">{item.description}</td>
+        {/* <td className="p-4 hidden md:table-cell">{item.description}</td> */}
 
         <td>
           <div className="flex items-center gap-2 justify-end">

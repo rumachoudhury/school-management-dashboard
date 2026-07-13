@@ -25,32 +25,35 @@ const columns: Column[] = [
   {
     header: "Title",
     accessor: "title",
+    className: "w-[30%]",
   },
   {
     header: "Class",
     accessor: "class",
+    className: "w-[15%]",
   },
   {
     header: "Date",
     accessor: "date",
-    className: "hidden md:table-cell",
+    className: "w-[20%] hidden md:table-cell",
   },
   {
     header: "Start Time",
     accessor: "startTime",
-    className: "hidden md:table-cell",
+    className: "w-[15%] hidden md:table-cell",
   },
   {
     header: "End Time",
     accessor: "endTime",
-    className: "hidden md:table-cell",
+    className: "w-[15%] hidden md:table-cell",
   },
   {
     header: "Actions",
     accessor: "action",
-    className: "text-right",
+    className: "w-[10%]",
   },
 ];
+
 export default function EventListPage() {
   const renderRow = (item: Event) => {
     return (
@@ -58,19 +61,25 @@ export default function EventListPage() {
         key={item.id}
         className="border-b border-gray-200 text-sm hover:bg-gray-50"
       >
-        <td className="p-4">{item.date}</td>
+        <td className="p-4 font-medium">{item.title}</td>
 
-        <td className="p-4">{item.startTime}</td>
+        <td className="p-4">
+          <span className="px-2 py-1 rounded-md bg-gray-100">{item.class}</span>
+        </td>
 
-        <td className="">{item.endTime}</td>
+        <td className="p-4 hidden md:table-cell">{item.date}</td>
 
-        <td>
+        <td className="p-4 hidden md:table-cell">{item.startTime}</td>
+
+        <td className="p-4 hidden md:table-cell">{item.endTime}</td>
+
+        <td className="p-4">
           <div className="flex items-center gap-2 justify-end">
-            <Link href={`/list/assignments/${item.id}`}>
-              <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
+            <Link href={`/list/events/${item.id}`}>
+              <button className="w-8 h-8 flex items-center justify-center rounded-full bg-sky-100">
                 <Image
                   src="/images/school-management-dashboard/edit.png"
-                  alt="View"
+                  alt="Edit"
                   width={16}
                   height={16}
                 />
@@ -78,7 +87,7 @@ export default function EventListPage() {
             </Link>
 
             {role === "admin" && (
-              <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple-100">
+              <button className="w-8 h-8 flex items-center justify-center rounded-full bg-purple-100">
                 <Image
                   src="/images/school-management-dashboard/delete.png"
                   alt="Delete"
