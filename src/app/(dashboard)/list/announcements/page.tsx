@@ -1,11 +1,9 @@
 import Pagination from "@/src/components/Pagination";
 import Table from "@/src/components/Table";
-
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
 import Link from "next/link";
-import { role, eventsData } from "@/src/lib/data";
-import Announcements from "../../../../components/Announcements";
+import { role, announcementsData } from "@/src/lib/data";
 
 type Column = {
   header: string;
@@ -13,13 +11,12 @@ type Column = {
   className?: string;
 };
 
-type Announcements = {
+type Announcement = {
   id: number;
   title: string;
   class: string;
   date: string;
-  startTime: string;
-  endTime: string;
+  description: string;
 };
 
 const columns: Column[] = [
@@ -37,13 +34,8 @@ const columns: Column[] = [
     className: "hidden md:table-cell",
   },
   {
-    header: "Start Time",
-    accessor: "startTime",
-    className: "hidden md:table-cell",
-  },
-  {
-    header: "End Time",
-    accessor: "endTime",
+    header: "Description",
+    accessor: "description",
     className: "hidden md:table-cell",
   },
   {
@@ -52,26 +44,29 @@ const columns: Column[] = [
     className: "text-right",
   },
 ];
-export default function EventListPage() {
-  const renderRow = (item: Event) => {
+
+export default function AnnouncementListPage() {
+  const renderRow = (item: Announcement) => {
     return (
       <tr
         key={item.id}
         className="border-b border-gray-200 text-sm hover:bg-gray-50"
       >
-        <td className="p-4">{item.date}</td>
+        <td className="p-4">{item.title}</td>
 
-        <td className="p-4">{item.startTime}</td>
+        <td className="p-4">{item.class}</td>
 
-        <td className="">{item.endTime}</td>
+        <td className="p-4 hidden md:table-cell">{item.date}</td>
+
+        <td className="p-4 hidden md:table-cell">{item.description}</td>
 
         <td>
           <div className="flex items-center gap-2 justify-end">
-            <Link href={`/list/assignments/${item.id}`}>
+            <Link href={`/list/announcements/${item.id}`}>
               <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
                 <Image
                   src="/images/school-management-dashboard/edit.png"
-                  alt="View"
+                  alt="Edit"
                   width={16}
                   height={16}
                 />
@@ -98,9 +93,9 @@ export default function EventListPage() {
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
       {/* Top */}
       <div className="flex items-center justify-between">
-        <h2 className="hidden md:block text-lg font-semibold">
-          All Event List
-        </h2>
+        <h1 className="hidden md:block text-lg font-semibold">
+          All Announcements
+        </h1>
 
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
           <div className="w-64">
@@ -120,7 +115,7 @@ export default function EventListPage() {
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-100">
               <Image
                 src="/images/school-management-dashboard/sort.png"
-                alt="Filter"
+                alt="Sort"
                 width={14}
                 height={14}
               />
@@ -130,7 +125,7 @@ export default function EventListPage() {
               <button className="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-100">
                 <Image
                   src="/images/school-management-dashboard/plus.png"
-                  alt="Filter"
+                  alt="Add"
                   width={14}
                   height={14}
                 />
@@ -141,7 +136,7 @@ export default function EventListPage() {
       </div>
 
       {/* List */}
-      <div className="">
+      <div className="mt-4">
         <Table
           columns={columns}
           data={announcementsData}
@@ -150,7 +145,7 @@ export default function EventListPage() {
       </div>
 
       {/* Pagination */}
-      <div className="">
+      <div className="mt-4">
         <Pagination />
       </div>
     </div>
