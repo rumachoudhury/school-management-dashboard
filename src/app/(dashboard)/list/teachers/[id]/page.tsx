@@ -6,9 +6,9 @@ function SingleTeacherPage() {
       {/* Left */}
       <div className="w-full xl:w-2/3">
         {/* Top */}
-        <div className="">
+        <div className="flex flex-col lg:flex-row gap-4">
           {/* User info card  */}
-          <div className=""></div>
+          <div className="bg-sky-400 py-6 px-4 rounded-md"></div>
 
           {/* Small card with some info */}
           <div className=""></div>
