@@ -28,7 +28,7 @@ function SingleTeacherPage() {
               </p>
 
               <div className="flex items-center justify-between gap-2 flex-wrap font-medium text-xs">
-                <div className="flex items-center gap-2 text-sm">
+                <div className="w-full md:w-1/3 flex items-center gap-2">
                   <Image
                     src="/images/school-management-dashboard/blood.png"
                     alt="blood image"
@@ -38,7 +38,7 @@ function SingleTeacherPage() {
                   <span>A+</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-sm">
+                <div className="w-full md:w-1/3 flex items-center gap-2">
                   <Image
                     src="/images/school-management-dashboard/date.png"
                     alt="calendar image"
@@ -48,7 +48,7 @@ function SingleTeacherPage() {
                   <span>January 2026</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-sm">
+                <div className="w-full md:w-1/3 flex items-center gap-2">
                   <Image
                     src="/images/school-management-dashboard/mail.png"
                     alt="mail image"
@@ -58,7 +58,7 @@ function SingleTeacherPage() {
                   <span>johndoe@example.com</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-sm">
+                <div className="w-full md:w-1/3 flex items-center gap-2">
                   <Image
                     src="/images/school-management-dashboard/phone.png"
                     alt="phoneimage"
