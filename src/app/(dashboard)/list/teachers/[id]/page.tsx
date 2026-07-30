@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { CalendarDays, Mail, Phone, Award } from "lucide-react";
+
 function SingleTeacherPage() {
   return (
     <div className="flex-1 p-4 flex flex-col xl:flex-row">
@@ -40,32 +40,32 @@ function SingleTeacherPage() {
 
                 <div className="flex items-center gap-2 text-sm">
                   <Image
-                    src="/images/school-management-dashboard/blood.png"
-                    alt="blood image"
+                    src="/images/school-management-dashboard/date.png"
+                    alt="calendar image"
                     width={14}
                     height={14}
                   />
-                  <span>A+</span>
+                  <span>January 2026</span>
                 </div>
 
                 <div className="flex items-center gap-2 text-sm">
                   <Image
-                    src="/images/school-management-dashboard/blood.png"
-                    alt="blood image"
+                    src="/images/school-management-dashboard/mail.png"
+                    alt="mail image"
                     width={14}
                     height={14}
                   />
-                  <span>A+</span>
+                  <span>johndoe@example.com</span>
                 </div>
 
                 <div className="flex items-center gap-2 text-sm">
                   <Image
-                    src="/images/school-management-dashboard/blood.png"
-                    alt="blood image"
+                    src="/images/school-management-dashboard/phone.png"
+                    alt="phoneimage"
                     width={14}
                     height={14}
                   />
-                  <span>A+</span>
+                  <span>+1 123 456 7890</span>
                 </div>
               </div>
             </div>
