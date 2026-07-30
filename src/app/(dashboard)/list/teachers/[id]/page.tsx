@@ -35,11 +35,38 @@ function SingleTeacherPage() {
                     width={14}
                     height={14}
                   />
+                  <span>A+</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-sm"></div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Image
+                    src="/images/school-management-dashboard/blood.png"
+                    alt="blood image"
+                    width={14}
+                    height={14}
+                  />
+                  <span>A+</span>
+                </div>
 
-                <div className="flex items-center gap-2 text-sm"></div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Image
+                    src="/images/school-management-dashboard/blood.png"
+                    alt="blood image"
+                    width={14}
+                    height={14}
+                  />
+                  <span>A+</span>
+                </div>
+
+                <div className="flex items-center gap-2 text-sm">
+                  <Image
+                    src="/images/school-management-dashboard/blood.png"
+                    alt="blood image"
+                    width={14}
+                    height={14}
+                  />
+                  <span>A+</span>
+                </div>
               </div>
             </div>
           </div>
