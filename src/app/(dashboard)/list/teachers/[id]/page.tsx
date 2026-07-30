@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import { CalendarDays, Mail, Phone, Award } from "lucide-react";
 function SingleTeacherPage() {
   return (
     <div className="flex-1 p-4 flex flex-col xl:flex-row">
@@ -20,14 +20,27 @@ function SingleTeacherPage() {
               />
             </div>
             <div className="w-2/3 flex flex-col justify-between gap-4">
-              <h1>John Doe</h1>
+              <h1 className="text-2xl font-semibold">John Doe</h1>
 
-              <p className="text-sm text-white">Grade: 5A</p>
+              <p className="text-sm text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                illo.
+              </p>
 
-              <p className="text-sm text-white">Email: johndoe@example.com</p>
-              <p className="text-sm text-white">Grade: 5A</p>
+              <div className="flex items-center justify-between gap-2 flex-wrap font-medium text-xs">
+                <div className="flex items-center gap-2 text-sm">
+                  <Image
+                    src="/images/school-management-dashboard/blood.png"
+                    alt="blood image"
+                    width={14}
+                    height={14}
+                  />
+                </div>
 
-              <p className="text-sm text-white">Email: johndoe@example.com</p>
+                <div className="flex items-center gap-2 text-sm"></div>
+
+                <div className="flex items-center gap-2 text-sm"></div>
+              </div>
             </div>
           </div>
 
