@@ -9,7 +9,7 @@ function SingleTeacherPage() {
         {/* Top */}
         <div className="flex flex-col lg:flex-row gap-4">
           {/* User info card  */}
-          <div className="bg-sky-400 py-6 px-4 rounded-md flex flex-1 gap-4">
+          <div className="bg-sky-200 py-6 px-4 rounded-md flex flex-1 gap-4">
             <div className="w-1/3">
               <Image
                 src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -19,16 +19,18 @@ function SingleTeacherPage() {
                 className="w-36 h-36 rounded-full object-cover"
               />
             </div>
-            <div className="w-2/3 flex flex-col justify-between gap-4">
-              <h1 className="text-2xl font-semibold">John Doe</h1>
 
-              <p className="text-sm text-gray-500">
+            {/* User Info */}
+            <div className="flex-1">
+              <h2 className="text-lg font-semibold text-gray-800">John Doe</h2>
+
+              <p className="text-sm text-gray-500 mt-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
                 illo.
               </p>
 
-              <div className="flex items-center justify-between gap-2 flex-wrap font-medium text-xs">
-                <div className="w-full md:w-1/3 flex items-center gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5 font-medium text-xs">
+                <div className="flex items-center gap-2">
                   <Image
                     src="/images/school-management-dashboard/blood.png"
                     alt="blood image"
@@ -38,7 +40,7 @@ function SingleTeacherPage() {
                   <span>A+</span>
                 </div>
 
-                <div className="w-full md:w-1/3 flex items-center gap-2">
+                <div className="flex items-center gap-2">
                   <Image
                     src="/images/school-management-dashboard/date.png"
                     alt="calendar image"
@@ -48,20 +50,20 @@ function SingleTeacherPage() {
                   <span>January 2026</span>
                 </div>
 
-                <div className="w-full md:w-1/3 flex items-center gap-2">
+                <div className="flex items-center gap-2 min-w-0">
                   <Image
                     src="/images/school-management-dashboard/mail.png"
                     alt="mail image"
                     width={14}
                     height={14}
                   />
-                  <span>johndoe@example.com</span>
+                  <span className="truncate">johndoe@example.com</span>
                 </div>
 
-                <div className="w-full md:w-1/3 flex items-center gap-2">
+                <div className="flex items-center gap-2">
                   <Image
                     src="/images/school-management-dashboard/phone.png"
-                    alt="phoneimage"
+                    alt="phone image"
                     width={14}
                     height={14}
                   />
