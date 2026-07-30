@@ -19,7 +19,16 @@ function SingleTeacherPage() {
                 className="w-36 h-36 rounded-full object-cover"
               />
             </div>
-            <div className="w-2/3"></div>
+            <div className="w-2/3 flex flex-col justify-between gap-4">
+              <h1>John Doe</h1>
+
+              <p className="text-sm text-white">Grade: 5A</p>
+
+              <p className="text-sm text-white">Email: johndoe@example.com</p>
+              <p className="text-sm text-white">Grade: 5A</p>
+
+              <p className="text-sm text-white">Email: johndoe@example.com</p>
+            </div>
           </div>
 
           {/* Small card with some info */}
