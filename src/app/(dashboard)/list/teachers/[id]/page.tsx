@@ -74,7 +74,18 @@ function SingleTeacherPage() {
           </div>
 
           {/* Small card with some info */}
-          <div className="flex flex-1"></div>
+          <div className="flex flex-1">
+            {/* Card */}
+            <div className="">
+              <Image
+                src="/images/school-management-dashboard/singleAttendance.png"
+                alt=""
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Bottom */}
