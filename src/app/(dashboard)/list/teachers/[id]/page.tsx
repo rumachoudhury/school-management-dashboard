@@ -86,8 +86,8 @@ function SingleTeacherPage() {
               />
 
               <div className="">
-                <h1>90%</h1>
-                <span className="">Attendance</span>
+                <h1 className="text-xl font-semibold">90%</h1>
+                <span className="text-sm text-gray-400">Attendance</span>
               </div>
             </div>
           </div>
