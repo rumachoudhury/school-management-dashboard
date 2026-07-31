@@ -75,7 +75,55 @@ function SingleTeacherPage() {
 
           {/* Small card with some info */}
           <div className="flex flex-1">
-            {/* Card */}
+            {/* Card 1 */}
+            {/* <div className="">
+              <Image
+                src="/images/school-management-dashboard/singleAttendance.png"
+                alt=""
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+
+              <div className="">
+                <h1 className="text-xl font-semibold">90%</h1>
+                <span className="text-sm text-gray-400">Attendance</span>
+              </div>
+            </div> */}
+
+            {/* Card 2 */}
+            {/* <div className="">
+              <Image
+                src="/images/school-management-dashboard/singleAttendance.png"
+                alt=""
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+
+              <div className="">
+                <h1 className="text-xl font-semibold">90%</h1>
+                <span className="text-sm text-gray-400">Attendance</span>
+              </div>
+            </div> */}
+
+            {/* Card 3 */}
+            {/* <div className="">
+              <Image
+                src="/images/school-management-dashboard/singleAttendance.png"
+                alt=""
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+
+              <div className="">
+                <h1 className="text-xl font-semibold">90%</h1>
+                <span className="text-sm text-gray-400">Attendance</span>
+              </div>
+            </div> */}
+
+            {/* Card 1 */}
             <div className="">
               <Image
                 src="/images/school-management-dashboard/singleAttendance.png"
@@ -88,6 +136,38 @@ function SingleTeacherPage() {
               <div className="">
                 <h1 className="text-xl font-semibold">90%</h1>
                 <span className="text-sm text-gray-400">Attendance</span>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="">
+              <Image
+                src="/images/school-management-dashboard/singleAttendance.png"
+                alt=""
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+
+              <div className="">
+                <h1 className="text-xl font-semibold">85</h1>
+                <span className="text-sm text-gray-400">Assignments</span>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="">
+              <Image
+                src="/images/school-management-dashboard/singleAttendance.png"
+                alt=""
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+
+              <div className="">
+                <h1 className="text-xl font-semibold">12</h1>
+                <span className="text-sm text-gray-400">Total Classes</span>
               </div>
             </div>
           </div>
