@@ -84,6 +84,11 @@ function SingleTeacherPage() {
                 height={24}
                 className="w-6 h-6"
               />
+
+              <div className="">
+                <h1>90%</h1>
+                <span className="">Attendance</span>
+              </div>
             </div>
           </div>
         </div>
