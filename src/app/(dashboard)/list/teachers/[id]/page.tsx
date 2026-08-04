@@ -14,8 +14,8 @@ function SingleTeacherPage() {
               <Image
                 src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt=""
-                width={144}
-                height={144}
+                width={140}
+                height={140}
                 className="w-36 h-36 rounded-full object-cover"
               />
             </div>
