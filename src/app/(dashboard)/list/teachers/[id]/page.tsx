@@ -160,8 +160,8 @@ function SingleTeacherPage() {
               <Image
                 src="/images/school-management-dashboard/singleAttendance.png"
                 alt=""
-                width={24}
-                height={24}
+                width={20}
+                height={20}
                 className="w-6 h-6"
               />
 
