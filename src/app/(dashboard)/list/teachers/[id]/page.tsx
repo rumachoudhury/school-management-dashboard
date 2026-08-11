@@ -462,7 +462,7 @@ function SingleTeacherPage() {
         {/* Bottom */}
         <div className="bg-white rounded-md p-3 sm:p-4 md:p-6 min-h-[300px] w-full">
           <h2 className="text-base sm:text-lg font-semibold text-gray-800 mb-4">
-            Schedule
+            Teacher&#39;s Schedule
           </h2>
 
           <div className="text-xs sm:text-sm text-gray-400">
