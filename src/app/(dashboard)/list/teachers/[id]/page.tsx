@@ -74,7 +74,7 @@ function SingleTeacherPage() {
           </div>
 
           {/* Small card with some info */}
-          <div className="flex flex-1">
+          <div className="flex flex-1 gap-6">
             {/* Card 1 */}
             {/* <div className="">
               <Image
@@ -142,7 +142,7 @@ function SingleTeacherPage() {
             {/* Card 2 */}
             <div className="">
               <Image
-                src="/images/school-management-dashboard/singleAttendance.png"
+                src="/images/school-management-dashboard/singleLesson.png"
                 alt=""
                 width={24}
                 height={24}
