@@ -124,7 +124,7 @@ function SingleTeacherPage() {
             </div> */}
 
             {/* Card 1 */}
-            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w[48%]">
+            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w[48%] xl:[45%] 2xl:[48%]">
               <Image
                 src="/images/school-management-dashboard/singleAttendance.png"
                 alt=""
@@ -140,7 +140,7 @@ function SingleTeacherPage() {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w[48%]">
+            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w[48%] xl:[45%] 2xl:[48%]">
               <Image
                 src="/images/school-management-dashboard/singleLesson.png"
                 alt=""
@@ -156,7 +156,7 @@ function SingleTeacherPage() {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w[48%]">
+            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w[48%] xl:[45%] 2xl:[48%]">
               <Image
                 src="/images/school-management-dashboard/singleClass.png"
                 alt=""
