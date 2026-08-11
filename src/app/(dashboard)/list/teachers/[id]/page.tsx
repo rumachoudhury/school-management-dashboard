@@ -158,7 +158,7 @@ function SingleTeacherPage() {
             {/* Card 3 */}
             <div className="">
               <Image
-                src="/images/school-management-dashboard/singleAttendance.png"
+                src="/images/school-management-dashboard/singleClass.png"
                 alt=""
                 width={20}
                 height={20}
