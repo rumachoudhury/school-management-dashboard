@@ -310,6 +310,7 @@
 // ====================
 import React from "react";
 import Image from "next/image";
+import BigCalendar from "@/src/components/BigCalendar";
 
 function SingleTeacherPage() {
   return (
@@ -464,6 +465,8 @@ function SingleTeacherPage() {
           <h2 className="text-base sm:text-lg font-semibold text-gray-800 mb-4">
             Teacher&#39;s Schedule
           </h2>
+
+          <BigCalendar />
 
           <div className="text-xs sm:text-sm text-gray-400">
             Schedule content goes here.
