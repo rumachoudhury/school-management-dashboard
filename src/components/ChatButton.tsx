@@ -66,79 +66,186 @@
 //   );
 // }
 // ==============
+// "use client";
+
+// import { useState } from "react";
+
+// export default function ChatButton() {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [message, setMessage] = useState("");
+
+//   const sendMessage = () => {
+//     if (!message.trim()) return;
+
+//     console.log("User:", message);
+
+//     setMessage("");
+//   };
+
+//   return (
+//     <>
+//       {/* Chat Window */}
+//       {isOpen && (
+//         <div className="fixed bottom-28 right-10 z-[9999] flex h-[450px] w-[350px] flex-col overflow-hidden rounded-xl bg-white shadow-2xl">
+//           {/* Header */}
+//           <div className="flex items-center justify-between bg-blue-600 p-4 text-white">
+//             <h2 className="font-semibold">AI Chat</h2>
+
+//             <button
+//               type="button"
+//               onClick={() => setIsOpen(false)}
+//               className="text-2xl"
+//             >
+//               ×
+//             </button>
+//           </div>
+
+//           {/* Messages */}
+//           <div className="flex-1 overflow-y-auto p-4">
+//             <div className="rounded-lg bg-gray-100 p-3 text-sm">
+//               Hello! 👋 How can I help you?
+//             </div>
+//           </div>
+
+//           {/* Input */}
+//           <div className="flex gap-2 border-t p-3">
+//             <input
+//               type="text"
+//               value={message}
+//               onChange={(e) => setMessage(e.target.value)}
+//               onKeyDown={(e) => {
+//                 if (e.key === "Enter") {
+//                   sendMessage();
+//                 }
+//               }}
+//               placeholder="Type a message..."
+//               className="flex-1 rounded-lg border px-3 py-2 text-sm outline-none focus:border-blue-500"
+//             />
+
+//             <button
+//               type="button"
+//               onClick={sendMessage}
+//               className="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+//             >
+//               Send
+//             </button>
+//           </div>
+//         </div>
+//       )}
+
+//       {/* Chat Button */}
+//       <button
+//         type="button"
+//         aria-label="Open chat"
+//         onClick={() => setIsOpen(!isOpen)}
+//         className="fixed bottom-10 right-10 z-[9999] flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 shadow-2xl transition-transform hover:scale-105"
+//       >
+//         <svg
+//           xmlns="http://www.w3.org/2000/svg"
+//           width="40"
+//           height="40"
+//           viewBox="0 0 40 40"
+//           fill="none"
+//         >
+//           <path
+//             d="M21.7548 5.74252C21.4258 6.51551 21.1989 7.34158 21.0865 8.20406H6.56408V29.0326L7.7003 27.8964H32.8205V18.5678C33.6973 18.34 34.5239 17.9883 35.282 17.5342V30.3579H9.90863L4.10254 36.164V5.74252H21.7548Z"
+//             fill="#FBFBFB"
+//           />
+
+//           <path
+//             d="M31.1394 3.44444C31.2887 5.19796 31.7497 6.46368 32.5224 7.32746C33.3107 8.25415 35.1578 8.85488 36.5945 8.90117V10.2986C35.1575 10.3449 33.3105 10.9454 32.5224 11.8723C31.7499 12.7361 31.2887 14.0005 31.1394 15.7537H29.742C29.5927 14.0005 29.1314 12.7361 28.359 11.8723C27.5709 10.9454 25.7238 10.3449 24.2868 10.2986V8.90117C25.7236 8.85488 27.5707 8.25415 28.359 7.32746C29.1317 6.46368 29.5927 5.19796 29.742 3.44444H31.1394Z"
+//             fill="#FBFBFB"
+//           />
+
+//           <path
+//             d="M36.5945 5.2922H34.7484V3.44444H36.5945V5.2922Z"
+//             fill="#FBFBFB"
+//           />
+//         </svg>
+//       </button>
+//     </>
+//   );
+// }
+
+// ============
 "use client";
 
 import { useState } from "react";
 
+type Message = {
+  id: number;
+  text: string;
+  sender: "user" | "bot";
+};
+
 export default function ChatButton() {
   const [isOpen, setIsOpen] = useState(false);
-  const [message, setMessage] = useState("");
+  const [input, setInput] = useState("");
+  const [messages, setMessages] = useState<Message[]>([]);
 
-  const sendMessage = () => {
-    if (!message.trim()) return;
+  // Send message
+  const sendMessage = async () => {
+    if (!input.trim()) return;
 
-    console.log("User:", message);
+    const userText = input;
 
-    setMessage("");
+    // Add user's message
+    const userMessage: Message = {
+      id: Date.now(),
+      text: userText,
+      sender: "user",
+    };
+
+    setMessages((prev) => [...prev, userMessage]);
+    setInput("");
+
+    try {
+      // Send message to Next.js API
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: userText,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to get response");
+      }
+
+      const data = await response.json();
+
+      // Add bot response
+      const botMessage: Message = {
+        id: Date.now() + 1,
+        text: data.reply,
+        sender: "bot",
+      };
+
+      setMessages((prev) => [...prev, botMessage]);
+    } catch (error) {
+      console.error("Chat error:", error);
+
+      const errorMessage: Message = {
+        id: Date.now() + 1,
+        text: "Sorry, something went wrong.",
+        sender: "bot",
+      };
+
+      setMessages((prev) => [...prev, errorMessage]);
+    }
   };
 
   return (
     <>
-      {/* Chat Window */}
-      {isOpen && (
-        <div className="fixed bottom-28 right-10 z-[9999] flex h-[450px] w-[350px] flex-col overflow-hidden rounded-xl bg-white shadow-2xl">
-          {/* Header */}
-          <div className="flex items-center justify-between bg-blue-600 p-4 text-white">
-            <h2 className="font-semibold">AI Chat</h2>
-
-            <button
-              type="button"
-              onClick={() => setIsOpen(false)}
-              className="text-2xl"
-            >
-              ×
-            </button>
-          </div>
-
-          {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4">
-            <div className="rounded-lg bg-gray-100 p-3 text-sm">
-              Hello! 👋 How can I help you?
-            </div>
-          </div>
-
-          {/* Input */}
-          <div className="flex gap-2 border-t p-3">
-            <input
-              type="text"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  sendMessage();
-                }
-              }}
-              placeholder="Type a message..."
-              className="flex-1 rounded-lg border px-3 py-2 text-sm outline-none focus:border-blue-500"
-            />
-
-            <button
-              type="button"
-              onClick={sendMessage}
-              className="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
-            >
-              Send
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* Chat Button */}
       <button
         type="button"
-        aria-label="Open chat"
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-10 right-10 z-[9999] flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 shadow-2xl transition-transform hover:scale-105"
+        className="fixed bottom-10 right-10 z-[9999] flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 shadow-2xl"
+        aria-label="Open chat"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -163,6 +270,94 @@ export default function ChatButton() {
           />
         </svg>
       </button>
+
+      {/* Chat Window */}
+      {isOpen && (
+        <div className="fixed bottom-28 right-10 z-[9998] flex h-[500px] w-[360px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
+          {/* Header */}
+          {/* <div className="bg-blue-600 px-4 py-4 text-white">
+            <h2 className="font-semibold">AI Assistant</h2>
+
+            <p className="text-sm opacity-80">How can I help you?</p>
+
+            <button
+              type="button"
+              onClick={() => setIsOpen(false)}
+              className="flex h-8 w-8 items-center justify-center rounded-full text-2xl hover:bg-blue-700"
+              aria-label="Close chat"
+            >
+              ×
+            </button>
+          </div> */}
+          <div className="flex items-center justify-between bg-blue-600 px-4 py-4 text-white">
+            <div>
+              <h2 className="font-semibold">AI Assistant</h2>
+              <p className="text-sm opacity-80">How can I help you?</p>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setIsOpen(false)}
+              className="flex h-8 w-8 items-center justify-center rounded-full text-2xl hover:bg-blue-700"
+              aria-label="Close chat"
+            >
+              ×
+            </button>
+          </div>
+
+          {/* Messages */}
+          <div className="flex-1 space-y-3 overflow-y-auto bg-gray-50 p-4">
+            {messages.length === 0 && (
+              <p className="text-center text-sm text-gray-400">
+                Start a conversation...
+              </p>
+            )}
+
+            {messages.map((message) => (
+              <div
+                key={message.id}
+                className={`flex ${
+                  message.sender === "user" ? "justify-end" : "justify-start"
+                }`}
+              >
+                <div
+                  className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm ${
+                    message.sender === "user"
+                      ? "rounded-br-sm bg-blue-600 text-white"
+                      : "rounded-bl-sm bg-white text-gray-800 shadow"
+                  }`}
+                >
+                  {message.text}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Input */}
+          <div className="flex gap-2 border-t bg-white p-3">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  sendMessage();
+                }
+              }}
+              placeholder="Type a message..."
+              className="flex-1 rounded-full border px-4 py-2 text-sm outline-none focus:border-blue-500"
+            />
+
+            <button
+              type="button"
+              onClick={sendMessage}
+              className="rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
