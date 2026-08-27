@@ -1,6 +1,7 @@
 
 "use client";
 
+import Image from "next/image";
 import {
   Pie,
   PieChart,
@@ -15,7 +16,12 @@ const data = [
 
 export default function Performance() {
   return (
-    <div className="h-[250px] w-full">
+    <div className="h-[250px] w-full bg-white rounded-md">
+        <div>
+            <h1></h1>
+            <Image src="/images/school-management-dashboard/moreDark.png" alt="" width={16} height={16}/>
+
+        </div>
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie
