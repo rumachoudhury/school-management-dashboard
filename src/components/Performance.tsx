@@ -1,23 +1,39 @@
+
 "use client";
 
-import { Pie, PieChart, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import {
+  Pie,
+  PieChart,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
-
-
-export default function Performance() {
-
-// #region Sample data
 const data = [
-{ name: "Performance", value: 92, fill: "#60a5fa" }, 
-{ name: "Remaining", value: 8, fill: "#fde68a" },
-//   { name: 'Group C', value: 300 },
-//   { name: 'Group D', value: 200 },
-//   { name: 'Group E', value: 278 },
-//   { name: 'Group F', value: 189 },
+  { name: "Performance", value: 92, fill: "#60a5fa" },
+  { name: "Remaining", value: 8, fill: "#fde68a" },
 ];
 
+export default function Performance() {
+  return (
+    <div className="h-[250px] w-full">
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart>
+          <Pie
+            data={data}
+            dataKey="value"
+            nameKey="name"
+            cx="50%"
+            cy="50%"
+            innerRadius={65}
+            outerRadius={90}
+            paddingAngle={3}
+            label
+          />
 
-    return(
-        <div>Performance</div>
-    )
+          <Tooltip />
+        </PieChart>
+      </ResponsiveContainer>
+    </div>
+  );
 }
+
