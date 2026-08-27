@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link"
 import BigCalendar from "@/src/components/BigCalendar";
 import Announcements from "@/src/components/Announcements";
+import Performance from "@/src/components/Performance";
 
 function SingleTeacherPage() {
   return (
@@ -217,6 +218,7 @@ function SingleTeacherPage() {
 </div>
       </div>
         <div className="bg-white rounded-md p-3 sm:p-4 md:p-6 min-h-[300px] w-full">
+        <Performance/>
         <Announcements/>
         </div>
         
