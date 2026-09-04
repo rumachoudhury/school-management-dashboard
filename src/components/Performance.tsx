@@ -39,10 +39,10 @@ export default function Performance() {
               nameKey="name"
               cx="50%"
               cy="50%"
-              innerRadius={65}
+              innerRadius={70}
               outerRadius={90}
               paddingAngle={3}
-              label
+            
             />
 
             <Tooltip />
