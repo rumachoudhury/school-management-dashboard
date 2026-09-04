@@ -1,7 +1,7 @@
 
-import React from "react";
+
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 import BigCalendar from "@/src/components/BigCalendar";
 import Announcements from "@/src/components/Announcements";
 import Performance from "@/src/components/Performance";
@@ -19,9 +19,7 @@ function SingleStudentPage() {
               {/* Profile Image */}
               <div className="shrink-0">
                 <Image
-                  // src="/images/school-management-dashboard/teacher.png"
-                //   src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                        src="https://images.pexels.com/photos/5414817/pexels-photo-5414817.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  src="https://images.pexels.com/photos/5414817/pexels-photo-5414817.jpeg?auto=compress&cs=tinysrgb&w=1200"
                   alt="Student"
                   width={120}
                   height={120}
@@ -29,10 +27,10 @@ function SingleStudentPage() {
                 />
               </div>
 
-              {/* User Info */}
+              {/* Student Info */}
               <div className="flex-1 min-w-0 w-full">
                 <h2 className="text-base sm:text-lg font-semibold text-gray-800">
-                  John Doe
+                 Amalye
                 </h2>
 
                 <p className="text-xs sm:text-sm text-gray-500 mt-2 leading-5">
@@ -40,7 +38,7 @@ function SingleStudentPage() {
                   Eaque, illo.
                 </p>
 
-                {/* Teacher Details */}
+                {/* Student Details */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-4 sm:mt-5 font-medium text-xs">
                   {/* Blood Group */}
                   <div className="flex items-center gap-2 min-w-0">
@@ -75,7 +73,9 @@ function SingleStudentPage() {
                       height={14}
                       className="shrink-0"
                     />
-                    <span className="truncate">johndoe@example.com</span>
+                    <span className="truncate">
+                      amalye@example.com
+                    </span>
                   </div>
 
                   {/* Phone */}
@@ -96,7 +96,7 @@ function SingleStudentPage() {
 
           {/* Small Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 w-full">
-            {/* Card 1 */}
+            {/* Attendance */}
             <div className="bg-white p-3 sm:p-4 rounded-md flex items-center gap-3 sm:gap-4 w-full min-w-0 min-h-[72px] sm:min-h-[80px]">
               <Image
                 src="/images/school-management-dashboard/singleAttendance.png"
@@ -108,14 +108,13 @@ function SingleStudentPage() {
 
               <div className="min-w-0">
                 <h1 className="text-lg sm:text-xl font-semibold">90%</h1>
-
                 <span className="text-xs sm:text-sm text-gray-400">
                   Attendance
                 </span>
               </div>
             </div>
 
-            {/* Card 2 */}
+            {/* Assignments */}
             <div className="bg-white p-3 sm:p-4 rounded-md flex items-center gap-3 sm:gap-4 w-full min-w-0 min-h-[72px] sm:min-h-[80px]">
               <Image
                 src="/images/school-management-dashboard/singleLesson.png"
@@ -127,14 +126,13 @@ function SingleStudentPage() {
 
               <div className="min-w-0">
                 <h1 className="text-lg sm:text-xl font-semibold">85</h1>
-
                 <span className="text-xs sm:text-sm text-gray-400">
                   Assignments
                 </span>
               </div>
             </div>
 
-            {/* Card 3 */}
+            {/* Total Classes */}
             <div className="bg-white p-3 sm:p-4 rounded-md flex items-center gap-3 sm:gap-4 w-full min-w-0 min-h-[72px] sm:min-h-[80px]">
               <Image
                 src="/images/school-management-dashboard/singleClass.png"
@@ -146,7 +144,6 @@ function SingleStudentPage() {
 
               <div className="min-w-0">
                 <h1 className="text-lg sm:text-xl font-semibold">12</h1>
-
                 <span className="text-xs sm:text-sm text-gray-400">
                   Total Classes
                 </span>
@@ -158,71 +155,62 @@ function SingleStudentPage() {
         {/* Bottom */}
         <div className="bg-white rounded-md p-3 sm:p-4 md:p-6 min-h-[300px] w-full">
           <h2 className="text-base sm:text-lg font-semibold text-gray-800 mb-4">
-            Teacher&#39;s Schedule
+            Student&#39;s Schedule
           </h2>
 
           <BigCalendar />
-
-          <div className="text-xs sm:text-sm text-gray-400">
-            Schedule content goes here.
-          </div>
         </div>
       </div>
 
       {/* Right */}
-      <div className="w-full xl:w-1/3 min-w-0">
-      <div className="bg-white p-4 rounded-md">
-        <h1 className="text-xl font-semibold">Shortcuts</h1>
-        {/* <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500">
-           <Link className="p-3 rounded-md bg-" href="/">Teacher&#39;s Classes</Link>
-           <Link className="p-3 rounded-md bg-" href="/">Teacher&#39;s Students</Link>
-           <Link className="p-3 rounded-md bg-" href="/">Teacher&#39;s Exams</Link>
-           <Link className="p-3 rounded-md bg-" href="/">Teacher&#39;s Lessonss</Link>
-           <Link className="p-3 rounded-md bg-" href="/">Teacher&#39;s Assignments</Link>
-        </div> */}
+      <div className="w-full xl:w-1/3 min-w-0 space-y-4">
+        {/* Shortcuts */}
+        <div className="bg-white p-4 rounded-md">
+          <h1 className="text-xl font-semibold">Shortcuts</h1>
 
-        <div className="mt-4 flex flex-wrap gap-4 text-xs">
-  <Link
-    className="rounded-md bg-blue-100 p-3 text-blue-700 hover:bg-blue-200"
-    href="/"
-  >
-    Teacher&#39;s Classes
-  </Link>
+          <div className="mt-4 flex flex-wrap gap-4 text-xs">
+            <Link
+              className="rounded-md bg-blue-100 p-3 text-blue-700 hover:bg-blue-200"
+              href="/list/lessons"
+            >
+              Student&#39;s Lessons
+            </Link>
 
-  <Link
-    className="rounded-md bg-green-100 p-3 text-green-700 hover:bg-green-200"
-    href="/"
-  >
-    Teacher&#39;s Students
-  </Link>
+            <Link
+              className="rounded-md bg-green-100 p-3 text-green-700 hover:bg-green-200"
+              href="/list/exams"
+            >
+              Student&#39;s Exams
+            </Link>
 
-  <Link
-    className="rounded-md bg-purple-100 p-3 text-purple-700 hover:bg-purple-200"
-    href="/"
-  >
-    Teacher&#39;s Exams
-  </Link>
+            <Link
+              className="rounded-md bg-purple-100 p-3 text-purple-700 hover:bg-purple-200"
+              href="/list/assignments"
+            >
+              Student&#39;s Assignments
+            </Link>
 
-  <Link
-    className="rounded-md bg-yellow-100 p-3 text-yellow-700 hover:bg-yellow-200"
-    href="/"
-  >
-    Teacher&#39;s Lessons
-  </Link>
+            <Link
+              className="rounded-md bg-yellow-100 p-3 text-yellow-700 hover:bg-yellow-200"
+              href="/list/results"
+            >
+              Student&#39;s Results
+            </Link>
 
-  <Link
-    className="rounded-md bg-pink-100 p-3 text-pink-700 hover:bg-pink-200"
-    href="/"
-  >
-    Teacher&#39;s Assignments
-  </Link>
-</div>
-      </div>
-        <div className="bg-white rounded-md p-3 sm:p-4 md:p-6 min-h-[300px] w-full">
-        <Performance/>
-        <Announcements/>
+            <Link
+              className="rounded-md bg-pink-100 p-3 text-pink-700 hover:bg-pink-200"
+              href="/list/attendance"
+            >
+              Student&#39;s Attendance
+            </Link>
+          </div>
         </div>
-        
+
+        {/* Performance & Announcements */}
+        <div className="bg-white rounded-md p-3 sm:p-4 md:p-6 min-h-[300px] w-full">
+          <Performance />
+          <Announcements />
+        </div>
       </div>
     </div>
   );
