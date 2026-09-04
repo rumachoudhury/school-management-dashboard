@@ -3,8 +3,8 @@ import Table from "@/src/components/Table";
 
 import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
-import Link from "next/link";
 import { role, subjectsData } from "@/src/lib/data";
+import FormModal from "@/src/components/FormModal";
 
 type Column = {
   header: string;
@@ -49,26 +49,16 @@ export default function SubjectListPage() {
 
         <td>
           <div className="flex items-center gap-2 justify-end">
-            <Link href={`/list/subjects/${item.id}`}>
-              <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
-                <Image
-                  src="/images/school-management-dashboard/edit.png"
-                  alt="View"
-                  width={16}
-                  height={16}
-                />
-              </button>
-            </Link>
-
             {role === "admin" && (
-              <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple-100">
-                <Image
-                  src="/images/school-management-dashboard/delete.png"
-                  alt="Delete"
-                  width={16}
-                  height={16}
+              <>
+                <FormModal
+                  table="subject"
+                  type="update"
+                  data={item}
+                  id={item.id}
                 />
-              </button>
+                <FormModal table="subject" type="delete" id={item.id} />
+              </>
             )}
           </div>
         </td>
@@ -108,16 +98,7 @@ export default function SubjectListPage() {
               />
             </button>
 
-            {role === "admin" && (
-              <button className="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-100">
-                <Image
-                  src="/images/school-management-dashboard/plus.png"
-                  alt="Filter"
-                  width={14}
-                  height={14}
-                />
-              </button>
-            )}
+            {role === "admin" && <FormModal table="subject" type="create" />}
           </div>
         </div>
       </div>

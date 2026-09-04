@@ -5,6 +5,7 @@ import TableSearch from "@/src/components/TableSearch";
 import Image from "next/image";
 import Link from "next/link";
 import { role, studentsData } from "@/src/lib/data";
+import FormModal from "@/src/components/FormModal";
 
 type Column = {
   header: string;
@@ -87,25 +88,19 @@ export default function StudentListPage() {
         <td className="hidden lg:table-cell">{item.address}</td>
 
         <td className="flex items-center gap-2 justify-end">
-          <Link href={`/list/students/${item.id}`}>
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100">
-              <Image
-                src="/images/school-management-dashboard/view.png"
-                alt="View"
-                width={16}
-                height={16}
-              />
-            </button>
+          <Link
+            href={`/list/students/${item.id}`}
+            className="w-7 h-7 flex items-center justify-center rounded-full bg-sky-100"
+          >
+            <Image
+              src="/images/school-management-dashboard/view.png"
+              alt="View"
+              width={16}
+              height={16}
+            />
           </Link>
           {role === "admin" && (
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple-100">
-              <Image
-                src="/images/school-management-dashboard/delete.png"
-                alt="View"
-                width={16}
-                height={16}
-              />
-            </button>
+            <FormModal table="student" type="delete" id={item.id} />
           )}
         </td>
       </tr>
@@ -144,16 +139,7 @@ export default function StudentListPage() {
               />
             </button>
 
-            {role === "admin" && (
-              <button className="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-100">
-                <Image
-                  src="/images/school-management-dashboard/plus.png"
-                  alt="Filter"
-                  width={14}
-                  height={14}
-                />
-              </button>
-            )}
+            {role === "admin" && <FormModal table="student" type="create" />}
           </div>
         </div>
       </div>

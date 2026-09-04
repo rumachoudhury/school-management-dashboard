@@ -97,10 +97,10 @@ export default function FormModal({
                 onClick={() => setOpen(true)}
                 className={`flex items-center justify-center rounded-full transition-colors ${
                     type === "create"
-                        ? "h-8 w-8 bg-lamaYellow"
+                                                ? "h-8 w-8 bg-yellow"
                         : type === "update"
-                          ? "h-7 w-7 bg-lamaSky"
-                          : "h-7 w-7 bg-lamaPurple"
+                                                    ? "h-7 w-7 bg-sky"
+                                                    : "h-7 w-7 bg-purple"
                 }`}
             >
                 <Image src={actionImages[type]} alt="" width={16} height={16} />
