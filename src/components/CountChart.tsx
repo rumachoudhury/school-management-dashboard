@@ -33,7 +33,7 @@ const data = [
 //   lineHeight: "24px",
 // };
 
-function CountChart() {
+function CountChart({boys,girls}:{boys:number,girls:number}) {
   return (
     <div className="bg-white rounded-xl w-full h-full p-4 shadow-md flex flex-col">
       {/* Title */}
